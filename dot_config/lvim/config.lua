@@ -368,3 +368,8 @@ vim.cmd("nnoremap <leader>ex :Lexplore<CR>:vertical resize 35<CR>")
 
 -- Remap for ripgrep
 vim.cmd("nnoremap <leader>rg :Rg")
+
+-- variable configuration from vimrc
+
+vim.g.hardtime_default_on=1
+vim.g.bracey_refresh_on_save=1
