@@ -1,6 +1,7 @@
 let mapleader = ","
 
 set nocompatible
+set redrawtime=10000
 set nu rnu
 set hlsearch
 set ignorecase
@@ -274,6 +275,9 @@ let g:coc_global_extensions = [
     \ 'coc-markdownlint',
     \ 'coc-markdown-preview-enhanced',
     \ 'coc-emmet',
+    \ 'coc-snippets',
+    \ 'coc-yank',
+    \ 'coc-calc',
     \ 'coc-go'
     \]
 
