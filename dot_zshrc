@@ -99,6 +99,7 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+alias sshk="kitty +kitten ssh"
 path+=('/home/sirio/.local/bin')
 path+=('/home/sirio/bin')
 export PATH
