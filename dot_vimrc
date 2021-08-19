@@ -240,8 +240,8 @@ let g:coc_global_extensions = [
 
 
 " Fugitive specific key remap
-nnoremap <leader>ga :Git add ./
-nnoremap <leader>gs :Git
-nnoremap <leader>gc :Git commit
-nnoremap <leader>gp :Git push
-nnoremap <leader>gP :Git pull
+nnoremap <leader>ga :Git add ./<cr>
+nnoremap <leader>gs :Git<cr>
+nnoremap <leader>gc :Git commit<cr>
+nnoremap <leader>gp :Git push<cr>
+nnoremap <leader>gP :Git pull<cr>
