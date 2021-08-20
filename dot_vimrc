@@ -52,7 +52,7 @@ Plug 'preservim/nerdcommenter'
 Plug 'stsewd/fzf-checkout.vim'
 Plug 'blindFS/vim-taskwarrior'
 call plug#end()
-map <C-k><C-k> :NERDTreeToggle<cr>
+map <C-o><C-k> :NERDTreeToggle<cr>
 
 nnoremap <C-p> :Files<cr>
 
@@ -245,3 +245,18 @@ nnoremap <leader>gs :Git<cr>
 nnoremap <leader>gc :Git commit<cr>
 nnoremap <leader>gp :Git push<cr>
 nnoremap <leader>gP :Git pull<cr>
+
+" remap from The Primeagen
+
+nnoremap n nzzzv
+nnoremap N Nzzzv
+nnoremap Y y$
+
+" Remap to move entire lines
+
+vnoremap J :m '>+1<CR>gv=gv
+vnoremap K :m '<-2<CR>gv=gv
+inoremap <C-j> <esc>:m .+1<CR>==i
+inoremap <C-k> <esc>:m .-2<CR>==i
+nnoremap <leader>k :m .-2<CR>==
+nnoremap <leader>j :m .+1<CR>==
