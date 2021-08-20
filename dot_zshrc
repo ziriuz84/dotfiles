@@ -101,6 +101,8 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 export EDITOR='vim'
 alias sshk="kitty +kitten ssh"
+alias icat="kitty +kitten icat"
+alias d="kitty +kitten diff"
 path+=('/home/sirio/.local/bin')
 path+=('/home/sirio/bin')
 export PATH
