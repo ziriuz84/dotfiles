@@ -51,6 +51,7 @@ Plug 'junegunn/fzf.vim'
 Plug 'preservim/nerdcommenter'
 Plug 'stsewd/fzf-checkout.vim'
 Plug 'blindFS/vim-taskwarrior'
+Plug 'wakatime/vim-wakatime'
 call plug#end()
 map <C-o><C-k> :NERDTreeToggle<cr>
 
