@@ -52,10 +52,12 @@ Plug 'preservim/nerdcommenter'
 Plug 'stsewd/fzf-checkout.vim'
 Plug 'blindFS/vim-taskwarrior'
 Plug 'wakatime/vim-wakatime'
+Plug 'yazgoo/yank-history'
 call plug#end()
 map <C-o><C-k> :NERDTreeToggle<cr>
 
 nnoremap <C-p> :Files<cr>
+nnoremap <leader>h :YankHistoryRgPaste<cr>
 
 let g:tagalong_verbose = 1
 
