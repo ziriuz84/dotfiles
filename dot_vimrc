@@ -53,6 +53,7 @@ Plug 'stsewd/fzf-checkout.vim'
 Plug 'blindFS/vim-taskwarrior'
 Plug 'wakatime/vim-wakatime'
 Plug 'yazgoo/yank-history'
+Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 call plug#end()
 map <C-o><C-k> :NERDTreeToggle<cr>
 
@@ -238,7 +239,8 @@ let g:coc_global_extensions = [
     \ 'coc-phpls',
     \ 'coc-python',
 	\ 'coc-diagnostic',
-    \ 'coc-sh'
+    \ 'coc-sh',
+    \ 'coc-go'
     \]
 
 
