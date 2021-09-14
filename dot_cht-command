@@ -1,0 +1,8 @@
+find
+fzf
+xargs
+mv
+ssh
+scp
+sed
+awk
