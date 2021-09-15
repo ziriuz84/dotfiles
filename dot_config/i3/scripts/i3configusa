@@ -183,7 +183,7 @@ bindsym $mod+Shift+i exec --no-startup-id "sh ~/.config/i3/scripts/usa2ita.sh"
 exec --no-startup-id "setxkbmap -layout us -variant intl"
 exec --no-startup-id "blueberry-tray"
 exec --no-startup-id "/home/sirio/Nextcloud.AppImage"
-exec --no-startup-id "feh --bg-scale /home/sirio/wallpaper/wallpaper.jpg"
+exec --no-startup-id "feh --bg-scale --randomize ~/wallpaper/*"
 
 # redshift modes
 bindsym $mod+b mode "$mode_redshift"
