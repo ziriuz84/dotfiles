@@ -54,6 +54,7 @@ Plug 'blindFS/vim-taskwarrior'
 Plug 'wakatime/vim-wakatime'
 Plug 'yazgoo/yank-history'
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+Plug 'mileszs/ack.vim'
 call plug#end()
 map <C-o><C-k> :NERDTreeToggle<cr>
 
