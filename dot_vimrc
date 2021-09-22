@@ -269,3 +269,7 @@ nnoremap <leader>j :m .+1<CR>==
 " Remap for TaskWarrior
 
 nnoremap <leader>tw :TW<CR>
+
+" Remap to past without delete the register
+
+vnoremap <leader>p "_dP
