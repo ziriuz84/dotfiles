@@ -55,6 +55,7 @@ Plug 'wakatime/vim-wakatime'
 Plug 'yazgoo/yank-history'
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 Plug 'mileszs/ack.vim'
+Plug 'ap/vim-css-color'
 call plug#end()
 map <C-o><C-k> :NERDTreeToggle<cr>
 
