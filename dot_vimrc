@@ -275,3 +275,6 @@ nnoremap <leader>tw :TW<CR>
 " Remap to past without delete the register
 
 vnoremap <leader>p "_dP
+
+" Remap to clean search highlight
+nnoremap <ESC><ESC> :nohl<CR>
