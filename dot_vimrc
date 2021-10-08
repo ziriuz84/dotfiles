@@ -56,6 +56,7 @@ Plug 'yazgoo/yank-history'
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 Plug 'mileszs/ack.vim'
 Plug 'ap/vim-css-color'
+Plug 'airblade/vim-gitgutter'
 call plug#end()
 map <C-o><C-k> :NERDTreeToggle<cr>
 
@@ -278,3 +279,9 @@ vnoremap <leader>p "_dP
 
 " Remap to clean search highlight
 nnoremap <ESC><ESC> :nohl<CR>
+
+set signcolumn=yes
+highlight SignColumn ctermbg=0 ctermfg=15
+highlight GitGutterAdd ctermbg=2 ctermfg=0
+highlight GitGutterChange ctermbg=3 ctermfg=0
+highlight GitGutterDelete ctermbg=1 ctermfg=0
