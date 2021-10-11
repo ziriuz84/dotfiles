@@ -57,6 +57,7 @@ Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 Plug 'mileszs/ack.vim'
 Plug 'ap/vim-css-color'
 Plug 'airblade/vim-gitgutter'
+Plug 'turbio/bracey.vim', {'do': 'npm install --prefix server'}
 call plug#end()
 map <C-o><C-k> :NERDTreeToggle<cr>
 
@@ -280,8 +281,12 @@ vnoremap <leader>p "_dP
 " Remap to clean search highlight
 nnoremap <ESC><ESC> :nohl<CR>
 
+"GitGutter personalization
 set signcolumn=yes
 highlight SignColumn ctermbg=0 ctermfg=15
 highlight GitGutterAdd ctermbg=2 ctermfg=0
 highlight GitGutterChange ctermbg=3 ctermfg=0
 highlight GitGutterDelete ctermbg=1 ctermfg=0
+
+"Bracey configurations
+let g:bracey_refresh_on_save = 1
