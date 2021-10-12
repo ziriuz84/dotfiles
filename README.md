@@ -6,6 +6,7 @@ Simply my dotfiles.
 I use [Chezmoi](https://chezmoi.io) to maintain my dotfiles in my pc. Follow the instruction on main site to install it (only 64 bit).
 
 You can use my repo using 
+
 `$ chezmoi init https://github.com/ziriu84/dotfiles.git`
 
 ## What is inside
