@@ -244,6 +244,10 @@ let g:coc_global_extensions = [
     \ 'coc-python',
 	\ 'coc-diagnostic',
     \ 'coc-sh',
+    \ 'coc-fzf-preview',
+    \ 'coc-gist',
+    \ 'coc-yaml',
+    \ 'coc-lightbulb',
     \ 'coc-go'
     \]
 
