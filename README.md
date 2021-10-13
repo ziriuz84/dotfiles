@@ -11,19 +11,19 @@ You can use my repo using
 
 ## What is inside
 
-[.zhsrc](https://github.com/ziriuz84/dotfiles/blob/main/dot_zshrc)
-[.vimrc](https://github.com/ziriuz84/dotfiles/blob/main/dot_vimrc)
-[.tmux.conf](https://github.com/ziriuz84/dotfiles/blob/main/dot_tmux.conf)
-[coc-settings.json](https://github.com/ziriuz84/dotfiles/blob/main/dot_vim/coc-settings.json)
-[dunstrc](https://github.com/ziriuz84/dotfiles/blob/main/dot_config/dunst/dunstrc)
-[kitty](https://github.com/ziriuz84/dotfiles/blob/main/dot_config/kitty/kitty.conf)
-[rofi's config.rasi](https://github.com/ziriuz84/dotfiles/blob/main/dot_config/rofi/config.rasi)
-[i3's config](https://github.com/ziriuz84/dotfiles/tree/main/dot_config/i3)
-[cht.sh search script](https://github.com/ziriuz84/dotfiles/blob/main/bin/executable_cht.sh)
-[Ping utility](https://github.com/ziriuz84/dotfiles/blob/main/bin/executable_pingpy.py)
-[My wallpapers](https://github.com/ziriuz84/dotfiles/tree/main/wallpaper)
-[Command dictionary for cht.sh](https://github.com/ziriuz84/dotfiles/blob/main/dot_cht-command)
-[Language dictionary fot cht.sh](https://github.com/ziriuz84/dotfiles/blob/main/dot_cht-languages)
+- [.zhsrc](https://github.com/ziriuz84/dotfiles/blob/main/dot_zshrc)
+- [.vimrc](https://github.com/ziriuz84/dotfiles/blob/main/dot_vimrc)
+- [.tmux.conf](https://github.com/ziriuz84/dotfiles/blob/main/dot_tmux.conf)
+- [coc-settings.json](https://github.com/ziriuz84/dotfiles/blob/main/dot_vim/coc-settings.json)
+- [dunstrc](https://github.com/ziriuz84/dotfiles/blob/main/dot_config/dunst/dunstrc)
+- [kitty](https://github.com/ziriuz84/dotfiles/blob/main/dot_config/kitty/kitty.conf)
+- [rofi's config.rasi](https://github.com/ziriuz84/dotfiles/blob/main/dot_config/rofi/config.rasi)
+- [i3's config](https://github.com/ziriuz84/dotfiles/tree/main/dot_config/i3)
+- [cht.sh search script](https://github.com/ziriuz84/dotfiles/blob/main/bin/executable_cht.sh)
+- [Ping utility](https://github.com/ziriuz84/dotfiles/blob/main/bin/executable_pingpy.py)
+- [My wallpapers](https://github.com/ziriuz84/dotfiles/tree/main/wallpaper)
+- [Command dictionary for cht.sh](https://github.com/ziriuz84/dotfiles/blob/main/dot_cht-command)
+- [Language dictionary fot cht.sh](https://github.com/ziriuz84/dotfiles/blob/main/dot_cht-languages)
 
 ## Why so many file for i3's configuration?
 
