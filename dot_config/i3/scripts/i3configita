@@ -198,6 +198,7 @@ mode "$mode_redshift" {
     bindsym Escape mode "default"
 }
 
+exec compton
 exec --no-startup-id "feh --bg-scale --randomize ~/wallpaper/*"
 exec --no-startup-id "/home/sirio/Nextcloud.AppImage"
 # Start i3bar to display a workspace bar (plus the system information i3status

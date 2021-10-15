@@ -180,6 +180,7 @@ bindsym $mod+Shift+u exec --no-startup-id "sh ~/.config/i3/scripts/ita2usa.sh"
 bindsym $mod+i exec --no-startuo-id "setxkbmap -layout it"
 bindsym $mod+Shift+i exec --no-startup-id "sh ~/.config/i3/scripts/usa2ita.sh"
 
+exec compton
 exec --no-startup-id "setxkbmap -layout us -variant intl"
 exec --no-startup-id "blueberry-tray"
 exec --no-startup-id "/home/sirio/Nextcloud.AppImage"
