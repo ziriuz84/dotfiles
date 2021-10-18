@@ -249,6 +249,7 @@ let g:coc_global_extensions = [
     \ 'coc-yaml',
     \ 'coc-lightbulb',
     \ 'coc-pairs',
+    \ 'coc-prettier',
     \ 'coc-go'
     \]
 
