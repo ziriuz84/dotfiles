@@ -250,6 +250,7 @@ let g:coc_global_extensions = [
     \ 'coc-lightbulb',
     \ 'coc-pairs',
     \ 'coc-prettier',
+    \ 'coc-markdownlint',
     \ 'coc-go'
     \]
 
