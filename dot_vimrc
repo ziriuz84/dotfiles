@@ -58,6 +58,13 @@ Plug 'mileszs/ack.vim'
 Plug 'ap/vim-css-color'
 Plug 'airblade/vim-gitgutter'
 Plug 'turbio/bracey.vim', {'do': 'npm install --prefix server'}
+Plug 'tpope/vim-repeat'
+Plug 'tpope/vim-surround'
+Plug 'tpope/vim-commentary'
+Plug 'christoomey/vim-system-copy'
+Plug 'christoomey/vim-sort-motion'
+Plug 'alvan/vim-closetag'
+Plug 'vim-scripts/ReplaceWithRegister'
 call plug#end()
 map <C-o><C-k> :NERDTreeToggle<cr>
 
