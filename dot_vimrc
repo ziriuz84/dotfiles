@@ -69,6 +69,7 @@ Plug 'christoomey/vim-system-copy'
 Plug 'christoomey/vim-sort-motion'
 Plug 'alvan/vim-closetag'
 Plug 'vim-scripts/ReplaceWithRegister'
+Plug 'takac/vim-hardtime'
 call plug#end()
 map <C-o><C-k> :NERDTreeToggle<cr>
 
@@ -76,6 +77,8 @@ nnoremap <C-p> :Files<cr>
 nnoremap <leader>h :YankHistoryRgPaste<cr>
 
 let g:tagalong_verbose = 1
+
+let g:hardtime_default_on = 1
 
 let g:EditorConfig_exclude_patterns = ['fugitive://.*']
 
