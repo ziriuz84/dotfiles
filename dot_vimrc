@@ -260,6 +260,7 @@ let g:coc_global_extensions = [
     \ 'coc-lightbulb',
     \ 'coc-pairs',
     \ 'coc-prettier',
+    \ 'coc-webview',
     \ 'coc-markdownlint',
     \ 'coc-markdown-preview-enhanced',
     \ 'coc-emmet',
@@ -299,6 +300,9 @@ vnoremap <leader>p "_dP
 
 " Remap to clean search highlight
 nnoremap <ESC><ESC> :nohl<CR>
+
+" Netrw left panel
+nnoremap <leader>ex :Lexplore<CR>:vertical resize 35<CR>
 
 "GitGutter personalization
 set signcolumn=yes
