@@ -12,6 +12,7 @@ set softtabstop=4
 set shiftwidth=4
 set expandtab
 set wrap
+set foldmethod=syntax
 autocmd BufRead,BufNewFile *.md,*.txt setlocal wrap
 set mouse=a
 set showmatch
