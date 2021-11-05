@@ -323,3 +323,7 @@ let g:bracey_refresh_on_save = 1
 if executable('ag')
   let g:ackprg = 'ag --vimgrep'
 endif
+
+" Remap for ripgrep and ag
+nnoremap <leader>rg :Rg 
+nnoremap <leader>ag :Ack 
