@@ -70,6 +70,7 @@ Plug 'christoomey/vim-sort-motion'
 Plug 'alvan/vim-closetag'
 Plug 'vim-scripts/ReplaceWithRegister'
 Plug 'takac/vim-hardtime'
+Plug 'jremmen/vim-ripgrep'
 call plug#end()
 map <C-o><C-k> :NERDTreeToggle<cr>
 
@@ -317,3 +318,8 @@ highlight GitGutterDelete ctermbg=1 ctermfg=0
 
 "Bracey configurations
 let g:bracey_refresh_on_save = 1
+
+"Using ag for :Ack
+if executable('ag')
+  let g:ackprg = 'ag --vimgrep'
+endif
