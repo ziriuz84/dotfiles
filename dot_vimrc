@@ -77,6 +77,8 @@ map <C-o><C-k> :NERDTreeToggle<cr>
 nnoremap <C-p> :Files<cr>
 nnoremap <leader>h :YankHistoryRgPaste<cr>
 
+let g:coc_disable_startup_warning = 1
+
 let g:tagalong_verbose = 1
 
 let g:hardtime_default_on = 1
