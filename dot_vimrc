@@ -271,6 +271,9 @@ let g:coc_global_extensions = [
     \ 'coc-markdownlint',
     \ 'coc-markdown-preview-enhanced',
     \ 'coc-emmet',
+    \ 'coc-snippets',
+    \ 'coc-yank',
+    \ 'coc-calc',
     \ 'coc-go'
     \]
 
