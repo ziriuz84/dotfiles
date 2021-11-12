@@ -108,6 +108,7 @@ alias d="kitty +kitten diff"
 alias lexa="exa -l -a -h --git"
 alias texa="exa -T"
 path+=('/home/sirio/.local/bin')
+path+=('/home/sirio/.cargo/bin')
 path+=('/home/sirio/bin')
 path+=('/home/sirio/gems/bin')
 export PATH
