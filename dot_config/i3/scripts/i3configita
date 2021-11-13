@@ -182,7 +182,7 @@ bindsym $mod+i exec --no-startuo-id "setxkbmap -layout it"
 bindsym $mod+Shift+i exec --no-startup-id "sh ~/.config/i3/scripts/usa2ita.sh"
 
 # redshift modes
-bindsym $mod+r mode "$mode_redshift"
+bindsym $mod+b mode "$mode_redshift"
 set $mode_redshift Set colour temperature: (a)uto, (r)eset, (2)500K, (3)000K, (4)000K, (5)000K
 set $kill_redshift pkill -9 redshift;
 mode "$mode_redshift" {
@@ -197,6 +197,9 @@ mode "$mode_redshift" {
     bindsym Return mode "default"
     bindsym Escape mode "default"
 }
+
+# Activate Vim-anywhere
+bindsym $mod+Alt+v exec ~/.vim-anywhere/bin/run
 
 exec compton
 exec --no-startup-id "feh --bg-scale --randomize ~/wallpaper/*"
