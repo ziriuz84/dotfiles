@@ -1,6 +1,7 @@
 let mapleader = ","
 
 set nocompatible
+set redrawtime=10000
 set nu rnu
 set hlsearch
 set ignorecase
