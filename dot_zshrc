@@ -107,6 +107,7 @@ alias icat="kitty +kitten icat"
 alias d="kitty +kitten diff"
 alias lexa="exa -l -a -h --git"
 alias texa="exa -T"
+alias python='python3'
 path+=('/home/sirio/.local/bin')
 path+=('/home/sirio/.cargo/bin')
 path+=('/home/sirio/bin')
