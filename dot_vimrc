@@ -72,6 +72,11 @@ Plug 'alvan/vim-closetag'
 Plug 'vim-scripts/ReplaceWithRegister'
 Plug 'takac/vim-hardtime'
 Plug 'jremmen/vim-ripgrep'
+Plug 'pangloss/vim-javascript'
+Plug 'leafgarland/typescript-vim'
+Plug 'peitalin/vim-jsx-typescript'
+Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
+Plug 'jparise/vim-graphql'
 call plug#end()
 map <C-o><C-k> :NERDTreeToggle<cr>
 
@@ -267,6 +272,7 @@ let g:coc_global_extensions = [
     \ 'coc-yaml',
     \ 'coc-lightbulb',
     \ 'coc-pairs',
+    \ 'coc-eslint',
     \ 'coc-prettier',
     \ 'coc-webview',
     \ 'coc-markdownlint',
