@@ -85,6 +85,9 @@ nnoremap <leader>h :YankHistoryRgPaste<cr>
 
 let g:coc_disable_startup_warning = 1
 
+let g:is_64bit = system("uname -m") =~ "x86_64\n"
+let g:coc_start_at_startup = g:is_64bit
+
 let g:tagalong_verbose = 1
 
 let g:hardtime_default_on = 1
