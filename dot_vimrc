@@ -78,6 +78,7 @@ Plug 'peitalin/vim-jsx-typescript'
 Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
 Plug 'jparise/vim-graphql'
 Plug 'rust-lang/rust.vim'
+Plug 'dense-analysis/ale'
 call plug#end()
 map <C-o><C-k> :NERDTreeToggle<cr>
 
@@ -344,3 +345,8 @@ endif
 " Remap for ripgrep and ag
 nnoremap <leader>rg :Rg 
 nnoremap <leader>ag :Ack 
+
+" rust automation
+let g:rustfmt_autosave = 1
+let g:rustfmt_emit_files = 1
+let g:rustfmt_fail_silently = 0
