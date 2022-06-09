@@ -1,0 +1,7 @@
+urls-source "ttrss"
+ttrss-url "http://ziriuz84.casacam.net:8280/tt-rss/"
+ttrss-login "sirio-ttrss"
+ttrss-password "Z+^RzYjqbVMm"
+ttrss-flag-star "t"
+ttrss-flag-publish "p"
+browser w3m
