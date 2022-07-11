@@ -205,6 +205,7 @@ exec compton
 exec --no-startup-id "feh --bg-scale --randomize ~/wallpaper/*"
 exec --no-startup-id "/home/sirio/Nextcloud.AppImage"
 exec --no-startup-id "solaar"
+exec --no-startup-id "setxkbmap -option compose:caps"
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 bar {
