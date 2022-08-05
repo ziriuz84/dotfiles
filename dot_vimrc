@@ -336,7 +336,7 @@ nnoremap <leader>ex :Lexplore<CR>:vertical resize 35<CR>
 
 "GitGutter personalization
 set signcolumn=yes
-highlight SignColumn ctermbg=0 ctermfg=15
+highlight SignColumn ctermbg=8 ctermfg=15
 highlight GitGutterAdd ctermbg=2 ctermfg=0
 highlight GitGutterChange ctermbg=3 ctermfg=0
 highlight GitGutterDelete ctermbg=1 ctermfg=0
