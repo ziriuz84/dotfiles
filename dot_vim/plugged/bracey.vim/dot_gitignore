@@ -1,0 +1,4 @@
+node_modules/
+.vimrc
+Session.vim
+*.log

@@ -1,4 +1,4 @@
-colors koehler
+colors monokai
 highlight LineNr guifg=DarkGray
 highlight Search guibg='Purple' guifg=#FFFFFF
 highlight String guifg=#FF5733

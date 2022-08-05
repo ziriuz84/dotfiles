@@ -1,0 +1,12 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhistcnt =2
+let g:netrw_dirhist_2='/var/www/html/della-maggiore/template'
+let g:netrw_dirhist_1='/var/www/html/agim'
+let g:netrw_dirhist_0='/var/www/html/toscanaone/template'
+let g:netrw_dirhist_9='/var/www/html/toscanaone'
+let g:netrw_dirhist_8='/var/www/html'
+let g:netrw_dirhist_7='/var/www/html/csisavona'
+let g:netrw_dirhist_6='/var/www/html/toscanaone/scss'
+let g:netrw_dirhist_5='/home/sirio/.local/share/chezmoi'
+let g:netrw_dirhist_4='/var/www/html/ecasa/template'
+let g:netrw_dirhist_3='/var/www/html/genagency/template'
