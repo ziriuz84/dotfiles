@@ -83,6 +83,7 @@ Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
 Plug 'jparise/vim-graphql'
 Plug 'rust-lang/rust.vim'
 Plug 'dense-analysis/ale'
+Plug 'crusoexia/vim-monokai'
 call plug#end()
 map <C-o><C-k> :NERDTreeToggle<cr>
 
