@@ -294,6 +294,7 @@ let g:coc_global_extensions = [
     "\ 'coc-yank',
     \ 'coc-calc',
     \ 'coc-rust-analyzer',
+    \ 'coc-vetur',
     \ 'coc-go'
     \]
 
