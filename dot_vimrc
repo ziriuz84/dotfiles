@@ -272,40 +272,13 @@ nnoremap <silent><nowait> <space>p  :<C-u>CocListResume<CR>
 inoremap <silent><expr> <CR> coc#pum#visible() ? coc#_select_confirm() : "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
 
 let g:coc_global_extensions = [
-<<<<<<< HEAD
-      \ 'coc-tsserver',
-      \ 'coc-json',
-      \ 'coc-html',
-      \ 'coc-css',
-      \ 'coc-phpls',
-      \ 'coc-python',
-      \ 'coc-diagnostic',
-      \ 'coc-sh',
-      \ 'coc-fzf-preview',
-      \ 'coc-gist',
-      \ 'coc-yaml',
-      \ 'coc-lightbulb',
-      \ 'coc-pairs',
-      \ 'coc-eslint',
-      \ 'coc-prettier',
-      \ 'coc-webview',
-      \ 'coc-markdownlint',
-      \ 'coc-markdown-preview-enhanced',
-      \ 'coc-emmet',
-      \ 'coc-snippets',
-      "\ 'coc-yank',
-      \ 'coc-calc',
-      \ 'coc-rust-analyzer',
-      \ 'coc-go'
-      \]
-=======
     \ 'coc-tsserver',
     \ 'coc-json',
     \ 'coc-html',
     \ 'coc-css',
     \ 'coc-phpls',
     \ 'coc-python',
-	\ 'coc-diagnostic',
+    \ 'coc-diagnostic',
     \ 'coc-sh',
     \ 'coc-fzf-preview',
     \ 'coc-gist',
@@ -325,7 +298,6 @@ let g:coc_global_extensions = [
     \ 'coc-vetur',
     \ 'coc-go'
     \]
->>>>>>> 00b7c20fff4024a13a717b34ce91794344022f83
 
 
 " Fugitive specific key remap
