@@ -1,5 +1,0 @@
-language: node_js
-before_install:
-  - cd server
-node_js:
-  - "node"
