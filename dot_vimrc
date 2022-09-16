@@ -343,6 +343,7 @@ highlight SignColumn ctermbg=8 ctermfg=15
 highlight GitGutterAdd ctermbg=2 ctermfg=0
 highlight GitGutterChange ctermbg=3 ctermfg=0
 highlight GitGutterDelete ctermbg=1 ctermfg=0
+highlight CocHintSign ctermfg=15
 
 "Bracey configurations
 let g:bracey_refresh_on_save = 1
