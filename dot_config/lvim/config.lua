@@ -280,6 +280,21 @@ lvim.plugins = {
     "turbio/bracey.vim",
     cmd = { "Bracey", "BracyStop", "BraceyReload", "BraceyEval" },
     run = "npm install --prefix server",
+  },
+  {
+    "ap/vim-css-color",
+  },
+  {
+    "takac/vim-hardtime",
+  },
+  {
+    "jremmen/vim-ripgrep",
+  },
+  {
+    "tpope/vim-commentary",
+  },
+  {
+    "preservim/nerdcommenter",
   }
 }
 
@@ -305,3 +320,51 @@ lvim.builtin.which_key.mappings["t"] = {
   l = { "<cmd>TroubleToggle loclist<cr>", "loclist" },
   r = { "<cmd>TroubleToggle lsp_references<cr>", "references" },
 }
+
+-- Configurazione personalizzata
+vim.opt.wrap = true
+vim.opt.relativenumber = true
+vim.cmd([[
+vmap > >gv
+vmap < <gv
+]])
+
+-- Fugitive specific key remap
+vim.cmd([[
+nnoremap <leader>ga :Git add ./<cr>
+nnoremap <leader>gs :Git<cr>
+nnoremap <leader>gc :Git commit<cr>
+nnoremap <leader>gp :Git push<cr>
+nnoremap <leader>gP :Git pull<cr>
+]])
+
+-- Remap from The Primagen
+vim.cmd([[
+nnoremap n nzzzv
+nnoremap N Nzzzv
+nnoremap Y y$
+]])
+
+-- Remap to move entire lines
+vim.cmd([[
+vnoremap J :m '>+1<CR>gv=gv
+vnoremap K :m '<-2<CR>gv=gv
+inoremap <C-j> <esc>:m .+1<CR>==i
+inoremap <C-k> <esc>:m .-2<CR>==i
+nnoremap <leader>k :m .-2<CR>==
+nnoremap <leader>j :m .+1<CR>==
+]])
+
+-- Remap for Taskwarrior
+vim.cmd("nnoremap <leader>tw :TW<CR>")
+
+-- Remap to past without to delete the register
+vim.cmd('vnoremap <leader>p "_dP')
+-- Remap to clean search highlight
+vim.cmd("nnoremap <ESC><ESC> :nohl<CR>")
+
+-- Netrw left panel
+vim.cmd("nnoremap <leader>ex :Lexplore<CR>:vertical resize 35<CR>")
+
+-- Remap for ripgrep
+vim.cmd("nnoremap <leader>rg :Rg")

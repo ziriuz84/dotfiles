@@ -99,7 +99,7 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-export EDITOR='vim'
+export EDITOR='lvim'
 # Install Ruby Gems to ~/gems
 export GEM_HOME="$HOME/gems"
 alias sshk="kitty +kitten ssh"
