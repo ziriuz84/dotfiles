@@ -295,6 +295,32 @@ lvim.plugins = {
   },
   {
     "preservim/nerdcommenter",
+  },
+  {
+    "tpope/vim-fugitive",
+    cmd = {
+      "G",
+      "Git",
+      "Gdiffsplit",
+      "Gread",
+      "Gwrite",
+      "Ggrep",
+      "GMove",
+      "GDelete",
+      "GBrowse",
+      "GRemove",
+      "GRename",
+      "Glgrep",
+      "GCommit",
+      "GPush",
+      "GPull",
+      "Gedit"
+    },
+    ft = { "fugitive" }
+  },
+
+  {
+    "Chiel92/vim-autoformat",
   }
 }
 
@@ -321,21 +347,21 @@ lvim.builtin.which_key.mappings["t"] = {
   r = { "<cmd>TroubleToggle lsp_references<cr>", "references" },
 }
 
+lvim.builtin.which_key.mappings["G"] = {
+  name = "Fugitive",
+  a = { "<cmd>Git add .<cr>", "Add all files to stage" },
+  s = { "<cmd>Git<cr>", "Status" },
+  c = { "<cmd>Git commit<cr>", "Commit" },
+  p = { "<cmd>Git push<cr>", "Push" },
+  P = { "<cmd>Git pull<cr>", "Pull" }
+}
+
 -- Configurazione personalizzata
 vim.opt.wrap = true
 vim.opt.relativenumber = true
 vim.cmd([[
 vmap > >gv
 vmap < <gv
-]])
-
--- Fugitive specific key remap
-vim.cmd([[
-nnoremap <leader>ga :Git add ./<cr>
-nnoremap <leader>gs :Git<cr>
-nnoremap <leader>gc :Git commit<cr>
-nnoremap <leader>gp :Git push<cr>
-nnoremap <leader>gP :Git pull<cr>
 ]])
 
 -- Remap from The Primagen
@@ -371,5 +397,5 @@ vim.cmd("nnoremap <leader>rg :Rg")
 
 -- variable configuration from vimrc
 
-vim.g.hardtime_default_on=1
-vim.g.bracey_refresh_on_save=1
+vim.g.hardtime_default_on = 1
+vim.g.bracey_refresh_on_save = 1
