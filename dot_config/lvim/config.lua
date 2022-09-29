@@ -320,7 +320,7 @@ lvim.plugins = {
   },
 
   {
-    "Chiel92/vim-autoformat",
+    "AndrewRadev/tagalong.vim",
   }
 }
 
