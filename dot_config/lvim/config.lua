@@ -399,3 +399,13 @@ vim.cmd("nnoremap <leader>rg :Rg")
 
 vim.g.hardtime_default_on = 1
 vim.g.bracey_refresh_on_save = 1
+
+local formatters = require "lvim.lsp.null-ls.formatters"
+formatters.setup {
+  { command = "black" },
+  {
+    command = "prettier",
+    args = { "--print-width", "100" },
+    filetypes = { "typescript", "typescriptreact", "css", "scss" },
+  },
+}
