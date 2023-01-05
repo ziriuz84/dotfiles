@@ -48,8 +48,8 @@ M.config = function()
     nls.builtins.formatting.shfmt.with { extra_args = { "-i", "2", "-ci" } },
     nls.builtins.formatting.black.with { extra_args = { "--fast" }, filetypes = { "python" } },
     nls.builtins.formatting.isort.with { extra_args = { "--profile", "black" }, filetypes = { "python" } },
-    nls.builtins.formatting.phpcsfixer.with { filetypes = { "php" } },
-    nls.builtins.diagnostics.phpcs.with { filetypes = { "php" } },
+    nls.builtins.formatting.phpcsfixer.with { filetypes = { "php", "phtml" } },
+    nls.builtins.diagnostics.phpcs.with { filetypes = { "php", "phtml" } },
     nls.builtins.diagnostics.ansiblelint.with {
       condition = function(utils)
         return utils.root_has_file "roles" and utils.root_has_file "inventories"
