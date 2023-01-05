@@ -10,7 +10,7 @@ lvim.log.level = "warn"
 -- vim.o.conceallevel = 2 -- uncomment if you want to see concealed text
 require("user.neovim").config()
 lvim.lsp.code_lens_refresh = true
--- lvim.lsp.diagnostics.virtual_text = false -- remove this line if you want to see inline errors
+lvim.lsp.diagnostics.virtual_text = false -- remove this line if you want to see inline errors
 lvim.lsp.installer.setup.automatic_installation = false
 
 -- Customization
@@ -35,10 +35,10 @@ lvim.builtin.nonumber_unfocus = false -- diffrentiate between focused and non fo
 lvim.builtin.custom_web_devicons = false -- install https://github.com/Nguyen-Hoang-Nam/mini-file-icons
 lvim.builtin.harpoon = { active = true } -- use the harpoon plugin
 lvim.builtin.remote_dev = { active = false } -- enable/disable remote development
-lvim.builtin.cursorline = { active = false } -- use a bit fancier cursorline
+lvim.builtin.cursorline = { active = true } -- use a bit fancier cursorline
 lvim.builtin.motion_provider = "hop" -- change this to use different motion providers ( hop or leap )
 lvim.builtin.hlslens = { active = false } -- enable/disable hlslens
-lvim.builtin.csv_support = false -- enable/disable csv support
+lvim.builtin.csv_support = true -- enable/disable csv support
 lvim.builtin.sidebar = { active = true } -- enable/disable sidebar
 lvim.builtin.task_runner = "" -- change this to use different task runners ( "async_tasks" or "overseer" or "")
 lvim.builtin.winbar_provider = "filename" -- can be "filename" or "treesitter" or "navic" or ""
@@ -47,7 +47,7 @@ lvim.builtin.metals = {
   fallbackScalaVersion = "3.2.0-RC3",
   serverVersion = "0.11.8",
 }
-lvim.builtin.collaborative_editing = { active = false } -- enable/disable collaborative editing
+lvim.builtin.collaborative_editing = { active = true } -- enable/disable collaborative editing
 lvim.builtin.file_browser = { active = true } -- enable/disable telescope file browser
 lvim.builtin.sniprun = { active = false } -- enable/disable sniprun
 lvim.builtin.tag_provider = "symbols-outline" -- change this to use different tag providers ( symbols-outline or vista )
@@ -56,22 +56,22 @@ lvim.builtin.global_statusline = false -- set true to use global statusline
 lvim.builtin.dressing = { active = false } -- enable to override vim.ui.input and vim.ui.select with telescope
 lvim.builtin.refactoring = { active = true } -- enable to use refactoring.nvim code_actions
 lvim.builtin.tmux_lualine = false -- use vim-tpipeline to integrate lualine and tmux
-lvim.builtin.lsp_lines = false -- enable/disable lsp_lines to display lsp virtual text below instead of behind
+lvim.builtin.lsp_lines = true -- enable/disable lsp_lines to display lsp virtual text below instead of behind
 if lvim.builtin.lsp_lines then
   lvim.lsp.diagnostics.virtual_text = false
 end
 lvim.builtin.legendary = { active = false } -- enable/disable legendary plugin ( ctrl-p command )
 lvim.builtin.tree_provider = "nvimtree" -- can be "neo-tree" or "nvimtree" or ""
 lvim.builtin.lir.active = false
-lvim.builtin.breadcrumbs.active = false
-lvim.builtin.illuminate.active = false
+lvim.builtin.breadcrumbs.active = true
+lvim.builtin.illuminate.active = true
 lvim.builtin.indentlines.active = true
 lvim.builtin.noice = { active = false } -- enables noice.nvim and inc-rename.nvim
-lvim.builtin.go_programming = { active = false } -- gopher.nvim + nvim-dap-go
+lvim.builtin.go_programming = { active = true } -- gopher.nvim + nvim-dap-go
 lvim.builtin.python_programming = { active = true } -- swenv.nvim + nvim-dap-python
 lvim.builtin.web_programming = { active = true } -- typescript.nvim + package-info.nvim
 lvim.builtin.rust_programming = { active = true } -- rust_tools.nvim + crates.nvim
-lvim.builtin.cpp_programming = { active = false } -- clangd_extensions.nvim + make-tools.nvim
+lvim.builtin.cpp_programming = { active = true } -- clangd_extensions.nvim + make-tools.nvim
 lvim.builtin.cmp.cmdline.enable = false
 lvim.builtin.borderless_cmp = false
 lvim.builtin.colored_args = false -- if true then sets up hlargs.nvim

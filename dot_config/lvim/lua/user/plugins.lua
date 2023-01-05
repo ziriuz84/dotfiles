@@ -1,22 +1,27 @@
 local M = {}
 
 M.config = function()
+  -- NOTE: after https://github.com/LunarVim/LunarVim/pull/3647 gets merged
+  -- we need to change `run` to `build`
+  -- and `tag` to `version`
+  -- and `requires` to `dependencies`
+
   local neoclip_req = { "kkharji/sqlite.lua", module = "sqlite" }
   if lvim.builtin.neoclip.enable_persistent_history == false then
     neoclip_req = {}
   end
   lvim.plugins = {
-    {
-      "folke/tokyonight.nvim",
-      config = function()
-        require("user.theme").tokyonight()
-        vim.cmd [[colorscheme tokyonight]]
-      end,
-      cond = function()
-        local _time = os.date "*t"
-        return (_time.hour >= 9 and _time.hour < 17) and lvim.builtin.time_based_themes
-      end,
-    },
+    -- {
+    --   "folke/tokyonight.nvim",
+    --   config = function()
+    --     require("user.theme").tokyonight()
+    --     vim.cmd [[colorscheme tokyonight]]
+    --   end,
+    --   cond = function()
+    --     local _time = os.date "*t"
+    --     return (_time.hour >= 9 and _time.hour < 17) and lvim.builtin.time_based_themes
+    --   end,
+    -- },
     {
       "rose-pine/neovim",
       as = "rose-pine",
@@ -756,6 +761,9 @@ M.config = function()
         require("lsp-inlayhints").setup()
       end,
       disable = not lvim.builtin.inlay_hints.active,
+    },
+    {
+      'wakatime/vim-wakatime',
     },
   }
 end
