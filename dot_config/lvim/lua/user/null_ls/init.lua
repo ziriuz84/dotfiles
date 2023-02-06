@@ -39,6 +39,7 @@ M.config = function()
     },
     nls.builtins.formatting.stylua,
     nls.builtins.formatting.goimports,
+    nls.builtins.formatting.gofumpt,
     nls.builtins.formatting.cmake_format,
     nls.builtins.formatting.scalafmt,
     nls.builtins.formatting.sqlformat,
@@ -92,6 +93,7 @@ M.config = function()
       end,
     },
     nls.builtins.code_actions.shellcheck,
+    nls.builtins.code_actions.gomodifytags,
     nls.builtins.code_actions.eslint_d.with {
       condition = function(utils)
         return utils.root_has_file { ".eslintrc", ".eslintrc.js" }
@@ -102,7 +104,6 @@ M.config = function()
     -- nls.builtins.formatting.google_java_format,
     -- nls.builtins.code_actions.proselint,
     -- nls.builtins.diagnostics.proselint,
-    custom_go_actions.gomodifytags,
     custom_go_actions.gostructhelper,
     custom_md_hover.dictionary,
   }

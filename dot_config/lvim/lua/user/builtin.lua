@@ -197,6 +197,7 @@ M.config = function()
   lvim.builtin.gitsigns.opts._threaded_diff = true
   lvim.builtin.gitsigns.opts._extmark_signs = true
   lvim.builtin.gitsigns.opts.current_line_blame_formatter = " <author>, <author_time> · <summary>"
+  lvim.builtin.gitsigns.opts.attach_to_untracked = false
 
   -- IndentBlankline
   -- =========================================
@@ -211,6 +212,9 @@ M.config = function()
     })
   end
 
+  if lvim.builtin.noice.active then
+    vim.lsp.handlers["textDocument/hover"] = require("noice.lsp.hover").on_hover
+  end
   lvim.lsp.buffer_mappings.normal_mode["ga"] = { "<cmd>lua vim.lsp.buf.code_action()<CR>", "Code Action" }
   lvim.lsp.buffer_mappings.normal_mode["gI"] = {
     "<cmd>lua require('user.telescope').lsp_implementations()<CR>",
@@ -366,7 +370,6 @@ M.config = function()
       node_decremental = "<C-r>",
     },
   }
-  lvim.builtin.treesitter.indent = { enable = true, disable = { "yaml", "python" } } -- treesitter is buggy :(
   lvim.builtin.treesitter.matchup.enable = true
   -- lvim.treesitter.textsubjects.enable = true
   -- lvim.treesitter.playground.enable = true

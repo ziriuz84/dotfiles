@@ -3,6 +3,18 @@ local M = {}
 local create_aucmd = vim.api.nvim_create_autocmd
 
 M.config = function()
+  vim.api.nvim_create_autocmd("ColorScheme", {
+    pattern = "*",
+    callback = function()
+      require("user.theme").telescope_theme {}
+      if lvim.builtin.dap.active then
+        require("user.dev_icons").define_dap_signs()
+      end
+      if lvim.use_icons == false and lvim.builtin.custom_web_devicons then
+        require("user.dev_icons").set_icon()
+      end
+    end,
+  })
   vim.api.nvim_clear_autocmds { pattern = "lir", group = "_filetype_settings" }
   vim.api.nvim_clear_autocmds { pattern = "*", group = "_lvim_colorscheme" }
   vim.api.nvim_create_augroup("_lvim_user", {})
@@ -57,10 +69,14 @@ M.config = function()
   --     autocmd BufReadPre,FileReadPre * if getfsize(expand("%")) > 1024 * 1024 | exec DisableSyntaxTreesitter() | endif
   -- augroup END
   --   ]]
-  create_aucmd("BufReadPost", {
+  create_aucmd("BufWinEnter", {
     group = "_lvim_user",
     pattern = "*.md",
-    command = "set syntax=markdown",
+    desc = "beautify markdown",
+    callback = function()
+      vim.cmd [[set syntax=markdown]]
+      require("user.markdown_syn").set_syntax()
+    end,
   })
 
   if lvim.builtin.sql_integration.active then
