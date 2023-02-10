@@ -5,7 +5,7 @@ lvim.colorscheme = "tokyonight" -- set to a custom theme
 lvim.builtin.time_based_themes = true -- set false to use your own configured theme
 lvim.transparent_window = false -- enable/disable transparency
 lvim.debug = false
-vim.lsp.set_log_level "error"
+vim.lsp.set_log_level("error")
 lvim.log.level = "warn"
 -- vim.o.conceallevel = 2 -- uncomment if you want to see concealed text
 require("user.neovim").config()
@@ -43,9 +43,9 @@ lvim.builtin.sidebar = { active = true } -- enable/disable sidebar
 lvim.builtin.task_runner = "" -- change this to use different task runners ( "async_tasks" or "overseer" or "")
 lvim.builtin.winbar_provider = "filename" -- can be "filename" or "treesitter" or "navic" or ""
 lvim.builtin.metals = {
-  active = false, -- enable/disable nvim-metals for scala development
-  fallbackScalaVersion = "3.2.0-RC3",
-  serverVersion = "0.11.8",
+	active = false, -- enable/disable nvim-metals for scala development
+	fallbackScalaVersion = "3.2.0-RC3",
+	serverVersion = "0.11.8",
 }
 lvim.builtin.collaborative_editing = { active = true } -- enable/disable collaborative editing
 lvim.builtin.file_browser = { active = true } -- enable/disable telescope file browser
@@ -58,7 +58,7 @@ lvim.builtin.refactoring = { active = true } -- enable to use refactoring.nvim c
 lvim.builtin.tmux_lualine = false -- use vim-tpipeline to integrate lualine and tmux
 lvim.builtin.lsp_lines = true -- enable/disable lsp_lines to display lsp virtual text below instead of behind
 if lvim.builtin.lsp_lines then
-  lvim.lsp.diagnostics.virtual_text = false
+	lvim.lsp.diagnostics.virtual_text = false
 end
 lvim.builtin.legendary = { active = true } -- enable/disable legendary plugin ( ctrl-p command )
 lvim.builtin.tree_provider = "nvimtree" -- can be "neo-tree" or "nvimtree" or ""
@@ -83,31 +83,31 @@ lvim.builtin.mind = { active = true, root_path = "~/.mind" } -- enable/disable m
 -- =========================================
 local user = vim.env.USER
 if user and user == "abz" then
-  lvim.reload_config_on_save = true
-  require("user.custom_user").config()
+	lvim.reload_config_on_save = true
+	require("user.custom_user").config()
 end
 
 -- Additional Actions Based on Custom User Config
 -- =========================================
 if lvim.builtin.winbar_provider == "navic" then
-  vim.opt.showtabline = 1
-  lvim.keys.normal_mode["<tab>"] =
-    "<cmd>lua require('telescope.builtin').buffers(require('telescope.themes').get_dropdown{previewer = false, initial_mode='normal'})<cr>"
-  lvim.builtin.bufferline.active = false
-  lvim.builtin.breadcrumbs.active = true
+	vim.opt.showtabline = 1
+	lvim.keys.normal_mode["<tab>"] =
+		"<cmd>lua require('telescope.builtin').buffers(require('telescope.themes').get_dropdown{previewer = false, initial_mode='normal'})<cr>"
+	lvim.builtin.bufferline.active = false
+	lvim.builtin.breadcrumbs.active = true
 end
 if lvim.builtin.breadcrumbs.active and lvim.builtin.noice.active then
-  table.insert(lvim.builtin.breadcrumbs.winbar_filetype_exclude, "vim")
+	table.insert(lvim.builtin.breadcrumbs.winbar_filetype_exclude, "vim")
 end
 lvim.builtin.nvimtree.active = lvim.builtin.tree_provider == "nvimtree"
 lvim.builtin.latex = {
-  view_method = "skim", -- change to zathura if you are on linux
-  preview_exec = "/Applications/Skim.app/Contents/SharedSupport/displayline", -- change this to zathura as well
-  rtl_support = true, -- if you want to use xelatex, it's a bit slower but works very well for RTL langs
-  active = false, -- set to true to enable
+	view_method = "skim", -- change to zathura if you are on linux
+	preview_exec = "/Applications/Skim.app/Contents/SharedSupport/displayline", -- change this to zathura as well
+	rtl_support = true, -- if you want to use xelatex, it's a bit slower but works very well for RTL langs
+	active = false, -- set to true to enable
 }
 if lvim.builtin.cursorline.active then
-  lvim.lsp.document_highlight = false
+	lvim.lsp.document_highlight = false
 end
 
 -- Override Lunarvim defaults
@@ -117,29 +117,29 @@ require("user.builtin").config()
 -- StatusLine
 -- =========================================
 if lvim.builtin.fancy_statusline.active then
-  require("user.lualine").config()
+	require("user.lualine").config()
 end
 
 -- Debugging
 -- =========================================
 if lvim.builtin.dap.active then
-  require("user.dap").config()
+	require("user.dap").config()
 end
 
 -- Language Specific
 -- =========================================
 vim.list_extend(lvim.lsp.automatic_configuration.skipped_servers, {
-  "clangd",
-  "dockerls",
-  "gopls",
-  "golangci_lint_ls",
-  "jdtls",
-  "pyright",
-  "rust_analyzer",
-  "taplo",
-  "texlab",
-  "tsserver",
-  "yamlls",
+	"clangd",
+	"dockerls",
+	"gopls",
+	"golangci_lint_ls",
+	"jdtls",
+	"pyright",
+	"rust_analyzer",
+	"taplo",
+	"texlab",
+	"tsserver",
+	"yamlls",
 })
 require("user.null_ls").config()
 
