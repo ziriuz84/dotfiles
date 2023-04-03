@@ -84,6 +84,7 @@ Plug 'jparise/vim-graphql'
 Plug 'rust-lang/rust.vim'
 Plug 'dense-analysis/ale'
 Plug 'crusoexia/vim-monokai'
+Plug 'wuelnerdotexe/vim-astro'
 "Plug 'tpope/vim-liquid'
 call plug#end()
 map <C-o><C-k> :NERDTreeToggle<cr>
