@@ -27,6 +27,7 @@ M.config = function()
       cond = function()
         local _time = os.date "*t"
         return (_time.hour >= 1 and _time.hour < 9) and lvim.builtin.time_based_themes
+        -- return false
       end,
     },
     {
@@ -542,7 +543,7 @@ M.config = function()
         require("user.cle").config()
       end,
       ft = { "c", "cpp", "objc", "objcpp", "h", "hpp" },
-      enabled = not lvim.builtin.cpp_programming.active,
+      enabled = lvim.builtin.cpp_programming.active,
     },
     {
       "editorconfig/editorconfig-vim",
@@ -567,6 +568,7 @@ M.config = function()
       config = function()
         require("user.legendary").config()
       end,
+      event = "VimEnter",
       enabled = lvim.builtin.legendary.active,
     },
     {
@@ -731,7 +733,9 @@ M.config = function()
       lazy = true,
       event = "VeryLazy",
       config = function()
-        require("hlargs").setup()
+        require("hlargs").setup {
+          excluded_filetype = { "TelescopePrompt", "guihua", "guihua_rust", "clap_input" },
+        }
       end,
       dependencies = { "nvim-treesitter/nvim-treesitter" },
       enabled = lvim.builtin.colored_args,

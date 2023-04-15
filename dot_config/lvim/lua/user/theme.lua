@@ -26,8 +26,7 @@ M.tokyonight = function()
     day_brightness = 0.3,
     hide_inactive_statusline = true,
     dim_inactive = true,
-    lualine_bold = false, -- When `true`, section headers in the lualine theme will be bold
-
+    lualine_bold = false,
     on_colors = function(colors)
       colors.git = { change = "#6183bb", add = "#449dab", delete = "#f7768e", conflict = "#bb7a61" }
       colors.bg_dark = "#1a1e30"
@@ -39,6 +38,7 @@ M.tokyonight = function()
       c.bg_dim = "#1f2335"
       c.bg_float = "#1a1e30"
       local current_colors = M.colors.tokyonight_colors
+      hl["@variable"] = { fg = c.fg }
       hl.NormalFloat = { fg = current_colors.fg, bg = "#181924" }
       hl.Cursor = { fg = current_colors.bg, bg = current_colors.fg }
       hl.NormalNC = { fg = current_colors.fg_dark, bg = "#1c1d28" }
@@ -50,7 +50,7 @@ end
 
 M.rose_pine = function()
   require("rose-pine").setup {
-    ---@usage 'main'|'moon'
+    variant = "main",
     dark_variant = "main",
     bold_vert_split = false,
     dim_nc_background = lvim.builtin.global_statusline,
@@ -86,7 +86,7 @@ M.rose_pine = function()
       VertSplit = { fg = "highlight_low", bg = "highlight_low" },
       SignColumn = { fg = "text", bg = "none" },
       SignColumnSB = { fg = "text", bg = "none" },
-      mkdInlineURL = { fg = "iris", style = "none" },
+      mkdInlineURL = { fg = "iris" },
       ["@variable"] = { fg = "text" },
       ["@variable.builtin"] = { fg = "love" },
       ["@type"] = { fg = "foam" },
@@ -110,7 +110,7 @@ M.rose_pine = function()
       ["@string.special"] = { fg = "gold" },
       ["@tag"] = { fg = "foam" },
       ["@tag.delimiter"] = { fg = "subtle" },
-      ["@text.title"] = { fg = "iris", style = "bold" },
+      ["@text.title"] = { fg = "iris" },
       ["@text.uri"] = { fg = "iris" },
       CmpItemKindText = { fg = "gold" },
       CmpItemKindConstructor = { fg = "foam" },
@@ -234,17 +234,33 @@ M.kanagawa = function()
     statementStyle = { italic = true },
     typeStyle = {},
     variablebuiltinStyle = { italic = true },
-    specialReturn = true, -- special highlight for the return keyword
-    specialException = true, -- special highlight for exception handling keywords
-    dimInactive = lvim.builtin.global_statusline, -- dim inactive window `:h hl-NormalNC`
-    globalStatus = lvim.builtin.global_statusline, -- adjust window separators highlight for laststatus=3
+    specialReturn = true,
+    specialException = true,
+    dimInactive = lvim.builtin.global_statusline,
+    globalStatus = lvim.builtin.global_statusline,
     transparent = lvim.transparent_window,
-    colors = { sumiInk1b = "#1b1b23" },
-    overrides = {
-      diffRemoved = { fg = "#E46876" },
-      NvimTreeFolderIcon = { fg = "#7e9cd8" },
-      CmpItemKindEnum = { fg = "#957FB8" },
-      ["@parameter"] = { fg = "#DCA561" },
+    colors = {
+      palette = { sumiInk1b = "#1b1b23" },
+      theme = {
+        all = {
+          ui = {
+            bg_gutter = "none",
+          },
+        },
+      },
+    },
+    overrides = function(_)
+      return {
+        diffRemoved = { fg = "#E46876" },
+        NvimTreeFolderIcon = { fg = "#7e9cd8" },
+        CmpItemKindEnum = { fg = "#957FB8" },
+        ["@parameter"] = { fg = "#DCA561" },
+      }
+    end,
+    theme = "wave",
+    background = {
+      dark = "wave",
+      light = "lotus",
     },
   }
 end
@@ -395,6 +411,7 @@ M.current_colors = function()
   local _time = os.date "*t"
   if _time.hour >= 1 and _time.hour < 9 then
     colors = M.colors.rose_pine_colors
+    -- colors = M.colors.catppuccin_colors
   elseif _time.hour >= 9 and _time.hour < 17 then
     colors = M.colors.tokyonight_colors
   elseif _time.hour >= 17 and _time.hour < 21 then
@@ -455,6 +472,21 @@ M.telescope_theme = function(colorset)
   link("LspDiagnosticsSignInfo", "DiagnosticInfo")
   link("NeoTreeDirectoryIcon", "NvimTreeFolderIcon")
   link("IndentBlanklineIndent1 ", "@comment")
+  if vim.fn.has "nvim-0.9" == 1 then
+    link("@lsp.type.enum", "@type")
+    link("@lsp.type.keyword", "@keyword")
+    link("@lsp.type.namespace", "@namespace")
+    link("@lsp.type.parameter", "@parameter")
+    link("@lsp.type.variable", "@variable")
+    link("@lsp.type.property", "@property")
+    link("@lsp.type.interface", "@interface")
+    link("@lsp.typemod.function.defaultLibrary", "Special")
+    link("@lsp.typemod.variable.defaultLibrary", "@variable.builtin")
+    link("@lsp.typemod.variable.global", "@constant.builtin")
+    link("@lsp.typemod.operator.injected", "@operator")
+    link("@lsp.typemod.string.injected", "@string")
+    link("@lsp.typemod.variable.injected", "@variable")
+  end
 
   -- NOTE: these are my personal preferences
   if lvim.builtin.time_based_themes then

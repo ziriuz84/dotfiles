@@ -213,7 +213,10 @@ M.config = function()
   end
 
   if lvim.builtin.noice.active then
-    vim.lsp.handlers["textDocument/hover"] = require("noice.lsp.hover").on_hover
+    local status_ok, noice = pcall(require, "noice.lsp.hover")
+    if status_ok then
+      vim.lsp.handlers["textDocument/hover"] = noice.on_hover
+    end
   end
   lvim.lsp.buffer_mappings.normal_mode["ga"] = { "<cmd>lua vim.lsp.buf.code_action()<CR>", "Code Action" }
   lvim.lsp.buffer_mappings.normal_mode["gI"] = {
@@ -338,7 +341,6 @@ M.config = function()
   lvim.builtin.terminal.active = true
   lvim.builtin.terminal.execs = {}
   lvim.builtin.terminal.autochdir = true
-  lvim.builtin.terminal.open_mapping = nil
   lvim.builtin.terminal.size = vim.o.columns * 0.4
   lvim.builtin.terminal.on_config_done = function()
     M.create_terminal(2, "<c-\\>", 20, "float")
@@ -569,6 +571,8 @@ M.config = function()
     end,
     find_command = { "fd", "--type=file", "--hidden" },
   }
+  lvim.builtin.telescope.pickers.buffers.sort_lastused = true
+  lvim.builtin.telescope.pickers.buffers.sort_mru = true
   lvim.builtin.telescope.on_config_done = function(telescope)
     telescope.load_extension "file_create"
     if lvim.builtin.file_browser.active then
