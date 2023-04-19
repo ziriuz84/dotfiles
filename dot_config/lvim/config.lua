@@ -87,6 +87,8 @@ if user and user == "abz" then
 	require("user.custom_user").config()
 end
 
+vim.g.codeium_disable_bindings = 1
+
 -- Additional Actions Based on Custom User Config
 -- =========================================
 if lvim.builtin.winbar_provider == "navic" then
