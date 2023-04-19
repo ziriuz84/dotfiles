@@ -87,7 +87,7 @@ if user and user == "abz" then
 	require("user.custom_user").config()
 end
 
-vim.g.codeium_disable_bindings = 1
+vim.g.codeium_enabled = false
 
 -- Additional Actions Based on Custom User Config
 -- =========================================
