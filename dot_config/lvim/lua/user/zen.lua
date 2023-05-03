@@ -16,7 +16,7 @@ M.show_diagnostics = function()
   local clients = vim.lsp.get_active_clients()
   for _, client in ipairs(clients) do
     local ns = vim.lsp.diagnostic.get_namespace(client.id)
-    vim.diagnostic.show(ns, nil, nil, lvim.lsp.diagnostics)
+    vim.diagnostic.show(ns, nil, nil, require('user.builtin').default_diagnostic_config)
   end
 
   if vim.bo.filetype == "rust" then
@@ -55,7 +55,6 @@ M.config = function()
       vim.cmd [[
           set foldlevel=10
           lua require("user.zen").hide_diagnostics()
-          lua require('lsp-inlayhints').toggle()
           IndentBlanklineDisable!
           ]]
       if lvim.builtin.tmux_lualine == false then
@@ -69,7 +68,6 @@ M.config = function()
           set foldmethod=expr
           set foldexpr=nvim_treesitter#foldexpr()
           lua require("user.zen").show_diagnostics()
-          lua require('lsp-inlayhints').toggle()
           IndentBlanklineEnable!
           ]]
       if lvim.builtin.tmux_lualine == false then

@@ -127,7 +127,7 @@ lvim.plugins = {
   - `lvim.builtin.tree_provider = "neo-tree"`
 - you can use noice.nvim if you want
   - `lvim.builtin.noice = { active = true }`
-- If you wanna see the issues, remove `lvim.lsp.diagnostics.virtual_text = false`
+- If you wanna see the issues, change `default_diagnostic_config.virtual_text` inside `builtin.lua`
 - I'm using `skim` for `latex` stuff, change it to `zathura` if you are on `linux`
 
 <!--
@@ -169,7 +169,7 @@ brew install node
 </details>
 
 ```shell
-# install LunarVim
+bash <(curl -s "https://raw.githubusercontent.com/lunarvim/lunarvim/master/utils/installer/install.sh")
 mv ~/.config/lvim ~/.config/lvim_backup
 git clone https://github.com/abzcoding/lvim.git ~/.config/lvim
 lvim +LvimUpdate +LvimCacheReset +q
@@ -439,7 +439,6 @@ _Symbols Outline_
 - [instant.nvim](https://github.com/jbyuki/instant.nvim)
 - [SnipRun](https://github.com/michaelb/sniprun)
 - [Vista](https://github.com/liuchengxu/vista.vim)
-- [editorconfig-vim](https://github.com/editorconfig/editorconfig-vim)
 - [dressing.nvim](https://github.com/stevearc/dressing.nvim)
 - [incline.nvim](https://github.com/b0o/incline.nvim)
 - [winbar.nvim](https://github.com/fgheng/winbar.nvim)
@@ -745,7 +744,7 @@ Note that,
 | ----------------------------- | :--: | -------------------------------- |
 | <kbd>Space</kbd>+<kbd>e</kbd> |  𝐍   | Toggle tree                      |
 | <kbd>></kbd> and <kbd><</kbd> |  𝐍   | Next and prev source inside tree |
-| <kbd><cr></kbd>               |  𝐍   | Open                             |
+| <kbd>Enter</kbd>              |  𝐍   | Open                             |
 | <kbd>s</kbd>                  |  𝐍   | Open in vertical split           |
 | <kbd>S</kbd>                  |  𝐍   | Open in horizontal spit          |
 | <kbd>H</kbd>                  |  𝐍   | Toggle hidden files              |
@@ -763,9 +762,9 @@ Note that,
 | ------------------------------------------ | :--: | ----------------- |
 | <kbd>Space</kbd>+<kbd>M</kbd>+<kbd>M</kbd> |  𝐍   | Open Main Tree    |
 | <kbd>Space</kbd>+<kbd>M</kbd>+<kbd>m</kbd> |  𝐍   | Open Local Tree   |
-| <kbd><cr></kbd>                            |  𝐍   | open data         |
-| <kbd><tab></kbd>                           |  𝐍   | toggle node       |
-| <kbd><s-tab></kbd>                         |  𝐍   | toggle parent     |
+| <kbd>Enter</kbd>                           |  𝐍   | open data         |
+| <kbd>Tab</kbd>                             |  𝐍   | toggle node       |
+| <kbd>Shift</kbd>+<kbd>Tab</kbd>            |  𝐍   | toggle parent     |
 | <kbd>/</kbd>                               |  𝐍   | select path       |
 | <kbd>$</kbd>                               |  𝐍   | change icons menu |
 | <kbd>c</kbd>                               |  𝐍   | create new node   |

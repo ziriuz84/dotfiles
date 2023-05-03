@@ -16,6 +16,7 @@ second: '(?:\b[A-Z][a-z]+ )+\(([A-Z]{3,5})\)'
 exceptions:
   - ACID
   - ACK
+  - ACL
   - AJAX
   - ANSI
   - API
@@ -35,11 +36,14 @@ exceptions:
   - CMD
   - CNA
   - CNAME
+  - CNI
   - CONOP
   - CORE
   - CORS
   - CPU
   - CRIME
+  - CRLF
+  - CSI
   - CSPM
   - CSRF
   - CSS
@@ -68,6 +72,7 @@ exceptions:
   - EOL
   - EPA
   - ETC
+  - ETCD
   - EXIF
   - FAQ
   - FIFO
@@ -126,9 +131,12 @@ exceptions:
   - LRU
   - LSP
   - LTS
+  - LUKS
   - MBR
+  - MFA
   - MIME
   - MIT
+  - MSSQL
   - MVC
   - NAT
   - NDA
@@ -141,6 +149,7 @@ exceptions:
   - ONLY
   - OSI
   - OSS
+  - OTR
   - OWASP
   - PAT
   - PCI
@@ -165,6 +174,7 @@ exceptions:
   - REST
   - RFB
   - RFC
+  - RFI
   - RHEL
   - RPC
   - RPM
@@ -190,6 +200,7 @@ exceptions:
   - SHA
   - SIEM
   - SLA
+  - SLSA
   - SMS
   - SMTP
   - SOAP
@@ -220,6 +231,7 @@ exceptions:
   - TLS
   - TODO
   - TOML
+  - TOR
   - TSC
   - TTL
   - UDP

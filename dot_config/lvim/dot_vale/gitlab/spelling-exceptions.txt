@@ -187,6 +187,7 @@ Microsoft
 MinIO
 Minikube
 ModSecurity
+Monero
 Monokai
 Nanoc
 Neogen
@@ -208,6 +209,7 @@ Overcommit
 Packagist
 Patroni
 Pentest
+PentestMonkey
 PgBouncer
 Phabricator
 Pipfile
@@ -223,6 +225,7 @@ ProseMirror
 Puma
 Python
 Qualys
+Qubes
 Quicktime
 Rackspace
 Raspbian
@@ -237,6 +240,7 @@ Rubix
 Rubocop
 Rubular
 SIEM
+SQLi
 SSRF
 Salesforce
 Schemastore
