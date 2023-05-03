@@ -82,6 +82,7 @@ if user and user == "abz" then
   lvim.reload_config_on_save = true
   require("user.custom_user").config()
 end
+vim.g.codeium_enabled = false
 
 -- Additional Actions Based on Custom User Config
 -- =========================================
