@@ -6,27 +6,28 @@ M.config = function()
     neoclip_req = {}
   end
   lvim.plugins = {
-    {
-      "folke/tokyonight.nvim",
-      config = function()
-        require("user.theme").tokyonight()
-        vim.cmd [[colorscheme habamax]]
-      end,
-      cond = function()
-        local _time = os.date "*t"
-        return (_time.hour >= 9 and _time.hour < 17) and lvim.builtin.time_based_themes
-      end,
-    },
+    -- {
+    --   "folke/tokyonight.nvim",
+    --   config = function()
+    --     require("user.theme").tokyonight()
+    --     vim.cmd [[colorscheme tokyonight]]
+    --   end,
+    --   cond = function()
+    --     local _time = os.date "*t"
+    --     return (_time.hour >= 9 and _time.hour < 17) and lvim.builtin.time_based_themes
+    --   end,
+    -- },
     {
       "rose-pine/neovim",
       name = "rose-pine",
       config = function()
         require("user.theme").rose_pine()
-        lvim.colorscheme = "evening"
+        lvim.colorscheme = "rose-pine"
       end,
       cond = function()
         local _time = os.date "*t"
         return (_time.hour >= 1 and _time.hour < 9) and lvim.builtin.time_based_themes
+        -- return false
       end,
     },
     {
@@ -542,12 +543,7 @@ M.config = function()
         require("user.cle").config()
       end,
       ft = { "c", "cpp", "objc", "objcpp", "h", "hpp" },
-      enabled = not lvim.builtin.cpp_programming.active,
-    },
-    {
-      "editorconfig/editorconfig-vim",
-      event = "BufRead",
-      enabled = lvim.builtin.editorconfig.active,
+      enabled = lvim.builtin.cpp_programming.active,
     },
     {
       "saecki/crates.nvim",
@@ -567,6 +563,7 @@ M.config = function()
       config = function()
         require("user.legendary").config()
       end,
+      event = "VimEnter",
       enabled = lvim.builtin.legendary.active,
     },
     {
@@ -731,7 +728,9 @@ M.config = function()
       lazy = true,
       event = "VeryLazy",
       config = function()
-        require("hlargs").setup()
+        require("hlargs").setup {
+          excluded_filetype = { "TelescopePrompt", "guihua", "guihua_rust", "clap_input" },
+        }
       end,
       dependencies = { "nvim-treesitter/nvim-treesitter" },
       enabled = lvim.builtin.colored_args,
@@ -783,8 +782,26 @@ M.config = function()
       event = "VeryLazy",
       enabled = lvim.builtin.mind.active,
     },
-		{
+    {
 			"wakatime/vim-wakatime",
+		},
+		{
+			"Exafunction/codeium.vim",
+			config = function()
+				-- Change '<C-g>' here to any keycode you like.
+				vim.keymap.set("i", "<C-g>", function()
+					return vim.fn["codeium#Accept"]()
+				end, { expr = true })
+				vim.keymap.set("i", "<c-;>", function()
+					return vim.fn["codeium#CycleCompletions"](1)
+				end, { expr = true })
+				vim.keymap.set("i", "<c-,>", function()
+					return vim.fn["codeium#CycleCompletions"](-1)
+				end, { expr = true })
+				vim.keymap.set("i", "<c-x>", function()
+					return vim.fn["codeium#Clear"]()
+				end, { expr = true })
+			end,
 		},
   }
 end

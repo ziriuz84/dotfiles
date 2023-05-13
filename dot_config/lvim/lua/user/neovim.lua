@@ -36,6 +36,8 @@ M.config = function()
     "algorithm:minimal",
   }
   vim.g.toggle_theme_icon = "   "
+  vim.opt.backupskip = "/tmp/*,$TMPDIR/*,$TMP/*,$TEMP/*,*/shm/*,/private/var/*,.vault.vim"
+  vim.opt.ttyfast = true
   vim.opt.wrap = true
   vim.opt.termguicolors = true
   vim.opt.updatetime = 100
@@ -93,6 +95,8 @@ M.config = function()
     "*.swp,.lock,.DS_Store,._*,tags.lock",
     -- version control
     ".git,.svn",
+    --rust
+    "Cargo.lock,Cargo.Bazel.lock",
   }
   vim.opt.shortmess = {
     t = true, -- truncate file messages at start
@@ -165,6 +169,9 @@ M.config = function()
       },
     }
   end
+  vim.g.editorconfig = true
+
+  vim.g.markdown_fenced_languages = { "shell=bash" }
 
   if vim.g.neovide then
     vim.g.neovide_cursor_animation_length = 0.01
