@@ -100,7 +100,7 @@ let g:coc_start_at_startup =1
 
 let g:tagalong_verbose = 1
 
-let g:hardtime_default_on = 1
+let g:hardtime_default_on = 0
 
 let g:EditorConfig_exclude_patterns = ['fugitive://.*']
 
