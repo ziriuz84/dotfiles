@@ -5,7 +5,7 @@ lvim.colorscheme = "tokyonight" -- set to a custom theme
 lvim.builtin.time_based_themes = true -- set false to use your own configured theme
 lvim.transparent_window = false -- enable/disable transparency
 lvim.debug = false
-lvim.lsp.set_log_level "error"
+lvim.lsp.set_log_level = "error"
 lvim.log.level = "warn"
 -- vim.o.conceallevel = 2 -- uncomment if you want to see concealed text
 require("user.neovim").config()
@@ -151,3 +151,4 @@ require("user.autocommands").config()
 -- Additional Keybindings
 -- =========================================
 require("user.keybindings").config()
+vim.lsp.buf.format({ timeout_ms = 10000 })
