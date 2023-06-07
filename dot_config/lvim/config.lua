@@ -151,3 +151,4 @@ require("user.autocommands").config()
 -- Additional Keybindings
 -- =========================================
 require("user.keybindings").config()
+vim.lsp.buf.format({ timeout_ms = 10000 })
