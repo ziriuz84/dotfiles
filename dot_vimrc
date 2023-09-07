@@ -298,6 +298,7 @@ let g:coc_global_extensions = [
     \ 'coc-calc',
     \ 'coc-rust-analyzer',
     \ 'coc-vetur',
+    \ '@yaegassy/coc-astro',
     \ 'coc-go'
     \]
 
