@@ -53,6 +53,7 @@ M.config = function()
     nls.builtins.formatting.cmake_format,
     nls.builtins.formatting.scalafmt,
     nls.builtins.formatting.sqlformat,
+    nls.builtins.formatting.phpcsfixer,
     nls.builtins.formatting.terraform_fmt.with {
       filetypes = { "terraform", "tf", "terraform-vars", "hcl" },
     },
