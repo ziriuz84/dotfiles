@@ -53,12 +53,9 @@ M.config = function()
     nls.builtins.formatting.cmake_format,
     nls.builtins.formatting.scalafmt,
     nls.builtins.formatting.sqlformat,
-    nls.builtins.formatting.phpcsfixer,
-    nls.builtins.formatting.blade_formatter.with {
-      filetypes = { "php", "blade", "blade.php" },
-      timeout = 50000,
+    nls.builtins.formatting.terraform_fmt.with {
+      filetypes = { "terraform", "tf", "terraform-vars", "hcl" },
     },
-    nls.builtins.formatting.terraform_fmt,
     -- Support for nix files
     nls.builtins.formatting.alejandra,
     nls.builtins.formatting.shfmt.with { extra_args = { "-i", "2", "-ci" } },

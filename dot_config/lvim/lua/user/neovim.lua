@@ -7,10 +7,10 @@ M.config = function()
     "getscriptPlugin",
     "gzip",
     "logipat",
-    "netrw",
-    "netrwPlugin",
-    "netrwSettings",
-    "netrwFileHandlers",
+    -- "netrw",
+    -- "netrwPlugin",
+    -- "netrwSettings",
+    -- "netrwFileHandlers",
     "matchit",
     "tar",
     "tarPlugin",
@@ -47,6 +47,7 @@ M.config = function()
   vim.opt.wrapscan = true -- Searches wrap around the end of the file
   vim.o.secure = true -- Disable autocmd etc for project local vimrc files.
   vim.o.exrc = false -- Allow project local vimrc files example .nvimrc see :h exrc
+  vim.o.sessionoptions = "buffers,curdir,folds,globals,help,tabpages,winpos,winsize"
   vim.wo.foldmethod = "expr"
   vim.wo.foldexpr = "nvim_treesitter#foldexpr()"
   vim.wo.foldlevel = 4

@@ -22,7 +22,21 @@ M.config = function()
 
     ui = {
       width = 40,
-
+      icon_preset = {
+        { " ", "Sub-project" },
+        { " ", "Journal, newspaper, weekly and daily news" },
+        { "󰞏 ", "For when you have an idea" },
+        { " ", "Note taking?" },
+        { " ", "Task management" },
+        { " ", "Uncheck, empty square or backlog" },
+        { "󰡖 ", "Full square or on-going" },
+        { "󰄵 ", "Check or done" },
+        { " ", "Trash bin, deleted, cancelled, etc." },
+        { " ", "GitHub" },
+        { "󱎴 ", "Monitoring" },
+        { " ", "Internet, Earth, everyone!" },
+        { " ", "Frozen, on-hold" },
+      },
       highlight = {
         node_root = "Number",
       },
@@ -35,10 +49,10 @@ M.config = function()
             local tree = args.get_tree()
             local node = require("mind.node").get_node_by_line(tree, line)
 
-            if node.icon == nil or node.icon == " " then
-              node.icon = " "
-            elseif node.icon == " " then
-              node.icon = " "
+            if node.icon == nil or node.icon == " " then
+              node.icon = " "
+            elseif node.icon == " " then
+              node.icon = " "
             end
 
             args.save_tree()
@@ -49,21 +63,5 @@ M.config = function()
     },
   }
 end
-
--- icon_preset = {
---       { ' ', 'Sub-project' },
---       { ' ', 'Journal, newspaper, weekly and daily news' },
---       { ' ', 'For when you have an idea' },
---       { ' ', 'Note taking?' },
---       { '陼', 'Task management' },
---       { ' ', 'Uncheck, empty square or backlog' },
---       { ' ', 'Full square or on-going' },
---       { ' ', 'Check or done' },
---       { ' ', 'Trash bin, deleted, cancelled, etc.' },
---       { ' ', 'GitHub' },
---       { ' ', 'Monitoring' },
---       { ' ', 'Internet, Earth, everyone!' },
---       { ' ', 'Frozen, on-hold' },
---     }
 
 return M

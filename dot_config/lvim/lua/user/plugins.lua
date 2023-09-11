@@ -198,14 +198,11 @@ M.config = function()
       event = "BufReadPre",
     },
     {
-      "folke/persistence.nvim",
+      "olimorris/persisted.nvim",
       event = "BufReadPre",
       lazy = true,
       config = function()
-        require("persistence").setup {
-          dir = vim.fn.expand(get_cache_dir() .. "/sessions/"), -- directory where session files are saved
-          options = { "buffers", "curdir", "tabpages", "winsize" }, -- sessionoptions used for saving
-        }
+        require("user.persist").config()
       end,
       enabled = lvim.builtin.persistence.active,
     },
@@ -519,6 +516,7 @@ M.config = function()
     },
     {
       "j-hui/fidget.nvim",
+      branch = "legacy",
       config = function()
         require("user.fidget_spinner").config()
       end,
@@ -539,9 +537,6 @@ M.config = function()
     },
     {
       "p00f/clangd_extensions.nvim",
-      config = function()
-        require("user.cle").config()
-      end,
       ft = { "c", "cpp", "objc", "objcpp", "h", "hpp" },
       enabled = lvim.builtin.cpp_programming.active,
     },
@@ -761,13 +756,6 @@ M.config = function()
       enabled = lvim.builtin.cpp_programming.active,
     },
     {
-      "lvimuser/lsp-inlayhints.nvim",
-      config = function()
-        require("lsp-inlayhints").setup()
-      end,
-      enabled = lvim.builtin.inlay_hints.active,
-    },
-    {
       "raimon49/requirements.txt.vim",
       event = "VeryLazy",
       enabled = lvim.builtin.python_programming.active,
@@ -782,27 +770,6 @@ M.config = function()
       event = "VeryLazy",
       enabled = lvim.builtin.mind.active,
     },
-    {
-			"wakatime/vim-wakatime",
-		},
-		{
-			"Exafunction/codeium.vim",
-			config = function()
-				-- Change '<C-g>' here to any keycode you like.
-				vim.keymap.set("i", "<C-g>", function()
-					return vim.fn["codeium#Accept"]()
-				end, { expr = true })
-				vim.keymap.set("i", "<c-;>", function()
-					return vim.fn["codeium#CycleCompletions"](1)
-				end, { expr = true })
-				vim.keymap.set("i", "<c-,>", function()
-					return vim.fn["codeium#CycleCompletions"](-1)
-				end, { expr = true })
-				vim.keymap.set("i", "<c-x>", function()
-					return vim.fn["codeium#Clear"]()
-				end, { expr = true })
-			end,
-		},
   }
 end
 
