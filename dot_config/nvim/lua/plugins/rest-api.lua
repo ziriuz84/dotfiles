@@ -1,7 +1,16 @@
 return {
   -- adds rest-api
   {
+    "folke/which-key.nvim",
+    opts = {
+      defaults = {
+        ["<leader>9"] = { name = "+restAPI" },
+      },
+    },
+  },
+  {
     "rest-nvim/rest.nvim",
+    event = "VeryLazy",
     dependencies = { "nvim-lua/plenary.nvim" },
     config = function()
       require("rest-nvim").setup({
