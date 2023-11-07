@@ -1,10 +1,21 @@
 return {
+  --  {
+  --    "folke/which-key.nvim",
+  --    opts = {
+  --      defaults = {
+  --        ["<leader>D"] = { name = "+Dadbod" },
+  --      },
+  --    },
+  --  },
   {
     "kristijanhusak/vim-dadbod-ui",
     event = "VeryLazy",
     dependencies = {
       { "tpope/vim-dadbod", lazy = true },
       { "kristijanhusak/vim-dadbod-completion", ft = { "sql", "mysql", "plsql" }, lazy = true },
+    },
+    keys = {
+      { "<leader>Do", "<cmd>DBUI<CR>", desc = "Open DadbodUI" },
     },
     cmd = {
       "DBUI",
