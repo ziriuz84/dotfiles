@@ -1,12 +1,12 @@
 return {
-  --  {
-  --    "folke/which-key.nvim",
-  --    opts = {
-  --      defaults = {
-  --        ["<leader>D"] = { name = "+Dadbod" },
-  --      },
-  --    },
-  --  },
+  {
+    "folke/which-key.nvim",
+    opts = {
+      defaults = {
+        ["<leader>D"] = { name = "+Dadbod" },
+      },
+    },
+  },
   {
     "kristijanhusak/vim-dadbod-ui",
     event = "VeryLazy",
