@@ -136,3 +136,5 @@ case ":$PATH:" in
   *) export PATH="$PNPM_HOME:$PATH" ;;
 esac
 # pnpm end%
+export GO111MODULE=on
+export GOPATH=$HOME/go
