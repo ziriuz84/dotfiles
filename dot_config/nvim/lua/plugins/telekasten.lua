@@ -1,13 +1,5 @@
 return {
   {
-    "folke/which-key.nvim",
-    opts = {
-      defaults = {
-        ["<leader>T"] = { name = "+Telekasten" },
-      },
-    },
-  },
-  {
     "renerocksai/calendar-vim",
   },
   {
@@ -19,7 +11,7 @@ return {
       })
     end,
     keys = {
-      { "<leader>To", "<cmd>Telekasten panel<cr>", desc = "Open Telekasten panel" },
+      { "<leader>T", "<cmd>Telekasten panel<cr>", desc = "+Telekasten" },
     },
   },
 }
