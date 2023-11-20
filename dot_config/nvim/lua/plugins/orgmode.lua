@@ -29,11 +29,18 @@ return {
       -- Setup orgmode
       require("orgmode").setup({
         org_agenda_files = "~/Nextcloud/orgfiles/**/*",
-        org_default_notes_file = "~/Nextcloud/orgfiles/refile.org",
-      })
-      require("cmp").setup({
-        sources = {
-          { name = "orgmode" },
+        org_default_notes_file = "~/Nextcloud/orgfiles/inbox.org",
+        org_capture_templates = {
+          t = {
+            description = "Task",
+            template = "* TODO %? :%(return os.time()): \n %u",
+            target = "~/Nextcloud/orgfiles/todo.org",
+          },
+          n = {
+            description = "Note",
+            template = "* %?  :%(return os.time()): \n %u",
+            target = "~/Nextcloud/orgfiles/inbox.org",
+          },
         },
       })
     end,
