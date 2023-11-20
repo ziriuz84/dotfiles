@@ -12,5 +12,8 @@ return {
         },
       })
     end,
+    keys = {
+      { "<leader>uS", "<cmd>lua require('shade').toggle()<CR>", desc = "Toggle Shade" },
+    },
   },
 }
