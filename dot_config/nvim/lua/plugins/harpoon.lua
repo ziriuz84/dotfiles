@@ -16,7 +16,7 @@ return {
         "<cmd>lua require('harpoon.mark').add_file()<CR>",
         desc = "Add to Harpoon",
       },
-      { "<leader>HH", "<cmd>lua require('harpoon.ui').toggle_quick_menu()<CR>", desc = "Open Harpoon" },
+      { "<leader>Ho", "<cmd>lua require('harpoon.ui').toggle_quick_menu()<CR>", desc = "Open Harpoon" },
     },
   },
 }
