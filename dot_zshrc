@@ -114,6 +114,7 @@ path+=('/home/sirio/bin')
 path+=('/home/sirio/gems/bin')
 path+=('/home/sirio/.config/composer/vendor/bin')
 path+=('/usr/local/go/bin')
+path+=('~/.local/share/nvim/')
 export GEM_HOME="$(ruby -e 'puts Gem.user_dir')"
 export PATH="$PATH:$GEM_HOME/bin"
 export ANDROID_HOME=$HOME/Android/Sdk
