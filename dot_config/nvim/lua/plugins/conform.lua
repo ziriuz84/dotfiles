@@ -1,6 +1,7 @@
 return {
   {
     "stevearc/conform.nvim",
+    event = "VeryLazy",
     opts = function()
       local opts = {
         formatters_by_ft = {
@@ -16,6 +17,7 @@ return {
           sh = { "beautysh", "shfmt" },
           blade = { "blade-formatter" },
           yaml = { "prettierd", "yamlfmt", "yamlfix" },
+          lua = { "stylua" }
         },
       }
       return opts
