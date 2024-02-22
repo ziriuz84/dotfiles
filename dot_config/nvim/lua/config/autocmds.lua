@@ -8,3 +8,10 @@ vim.api.nvim_create_autocmd({ "FileType" }, {
     vim.b.autoformat = false
   end,
 })
+
+vim.api.nvim_create_autocmd({ "FileType" }, {
+  pattern = { "md", "markdown" },
+  callback = function()
+    vim.o.textwidth = 80
+  end,
+})
