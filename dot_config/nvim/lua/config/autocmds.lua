@@ -13,5 +13,6 @@ vim.api.nvim_create_autocmd({ "FileType" }, {
   pattern = { "md", "markdown" },
   callback = function()
     vim.o.textwidth = 80
+    vim.opt.spelllang = { "en", "it" }
   end,
 })
