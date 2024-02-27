@@ -6,19 +6,25 @@ return {
       local opts = {
         formatters_by_ft = {
           python = { "autoflake", "isort", "black", "autopep8" },
-          php = { "php-cs-fixer" },
-          phtml = { "php-cs-fixer" },
-          markdown = { "prettierd", "markdownlint", "markdown-toc", "cbfmt" },
+          php = { "php-cs-fixer", "pint" },
+          phtml = { "intelephense", "pint" },
+          markdown = { "prettierd", "markdownlint", "markdown-toc" },
           go = { "gofmt", "goimports", "gomodifytags", "djlint" },
           rust = { "rustfmt" },
           javascript = { "biome", "rustywind" },
           typescript = { "biome", "rustywind" },
-          -- html = { "prettierd", "rustywind" },
+          html = { "prettierd", "rustywind" },
           json = { "fixjson", "prettierd" },
           sh = { "beautysh", "shfmt" },
           blade = { "blade-formatter" },
           yaml = { "prettierd", "yamlfmt", "yamlfix" },
-          lua = { "stylua" }
+          lua = { "stylua" },
+          xml = { "xmlformatter" },
+        },
+        formatters = {
+          php_cs_fixer = {
+            prepend_args = { "--rules=PSR12" },
+          },
         },
       }
       return opts
