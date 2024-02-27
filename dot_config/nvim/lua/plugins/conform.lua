@@ -7,7 +7,7 @@ return {
         formatters_by_ft = {
           python = { "autoflake", "isort", "black", "autopep8" },
           php = { "php-cs-fixer", "pint" },
-          phtml = { "intelephense", "pint" },
+          phtml = { "php-cs-fixer", "pint" },
           markdown = { "prettierd", "markdownlint", "markdown-toc" },
           go = { "gofmt", "goimports", "gomodifytags", "djlint" },
           rust = { "rustfmt" },
