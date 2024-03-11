@@ -133,3 +133,6 @@ export PATH="/home/linuxbrew/.linuxbrew/opt/node@18/bin:$PATH"
 # tabtab source for packages
 # uninstall by removing these lines
 [[ -f ~/.config/tabtab/__tabtab.zsh ]] && . ~/.config/tabtab/__tabtab.zsh || true
+
+# PKG_CONFIG_PATH export to solve problems between tauri.app and homebrew
+export PKG_CONFIG_PATH=/usr/lib/pkgconfig:/usr/share/pkgconfig:/usr/lib/x86_64-linux-gnu/pkgconfig
