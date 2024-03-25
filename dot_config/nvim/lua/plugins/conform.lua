@@ -8,7 +8,7 @@ return {
           python = { "autoflake", "isort", "black", "autopep8" },
           php = { "php-cs-fixer", "pint" },
           phtml = { "php-cs-fixer", "pint" },
-          markdown = { "prettierd", "markdownlint", "markdown-toc" },
+          markdown = { "prettierd", "markdownlint", "markdown-toc", "vale" },
           go = { "gofmt", "goimports", "gomodifytags", "djlint" },
           rust = { "rustfmt" },
           javascript = { "biome", "rustywind" },
