@@ -20,6 +20,9 @@ return {
           yaml = { "prettierd", "yamlfmt", "yamlfix" },
           lua = { "stylua" },
           xml = { "xmlformatter" },
+          css = { "prettierd" },
+          sass = { "prettierd" },
+          scss = { "prettierd" },
         },
         formatters = {
           php_cs_fixer = {
