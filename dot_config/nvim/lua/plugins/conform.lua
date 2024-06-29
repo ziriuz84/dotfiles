@@ -23,6 +23,7 @@ return {
           css = { "prettierd" },
           sass = { "prettierd" },
           scss = { "prettierd" },
+          astro = { "prettier" },
         },
         formatters = {
           php_cs_fixer = {
