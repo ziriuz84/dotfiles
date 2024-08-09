@@ -2,3 +2,9 @@
 require("config.lazy")
 
 vim.g.astro_typescript = "enable"
+
+vim.filetype.add({
+  pattern = {
+    [".*%.blade%.php"] = "blade",
+  },
+})
