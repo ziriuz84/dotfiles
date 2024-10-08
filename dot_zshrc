@@ -111,6 +111,7 @@ alias d="kitty +kitten diff"
 alias lexa="eza -l -a -h --git"
 alias texa="eza -T"
 alias python='python3'
+alias nvimtest='NVIM_APPNAME=nvim-test nvim'
 path+=('/home/sirio/.local/bin')
 path+=('/home/sirio/.cargo/bin')
 path+=('/home/sirio/bin')
