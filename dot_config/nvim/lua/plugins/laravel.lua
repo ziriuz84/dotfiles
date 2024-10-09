@@ -1,5 +1,13 @@
 return {
   {
+    "folke/which-key.nvim",
+    opts = {
+      defaults = {
+        ["<leader>z"] = { name = "+Laravel" },
+      },
+    },
+  },
+  {
     -- Add neotest-pest plugin for running PHP tests.
     -- A package is also available for PHPUnit if needed.
     "nvim-neotest/neotest",
