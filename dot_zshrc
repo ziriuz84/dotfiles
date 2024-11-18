@@ -142,3 +142,6 @@ export PKG_CONFIG_PATH=/usr/lib/pkgconfig:/usr/share/pkgconfig:/usr/lib/x86_64-l
 
 autoload -Uz compinit
 compinit
+
+eval "$(zoxide init zsh)"
+
