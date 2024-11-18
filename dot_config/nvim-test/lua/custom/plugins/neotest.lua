@@ -17,6 +17,7 @@ return {
           require 'neotest-rust',
           require 'neotest-go',
           require 'neotest-python',
+          require 'rustaceanvim.neotest'
         },
       }
     end,

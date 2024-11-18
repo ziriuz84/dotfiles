@@ -1,1 +1,7 @@
 0000000000000000000000000000000000000000 5aeddfdd5d0308506ec63b0e4f8de33e2a39355f Sirio Negri <ziriuz84@gmail.com> 1717316825 +0200	clone: from github.com:ziriuz84/kickstart.nvim.git
+5aeddfdd5d0308506ec63b0e4f8de33e2a39355f 833b9ae87c21b74cdc14ba3c7373598efa93ca86 Sirio Negri <ziriuz84@gmail.com> 1731625149 +0100	commit: default config
+833b9ae87c21b74cdc14ba3c7373598efa93ca86 eed9cb98156c3f83d189915417f7c6144bc0ba60 Sirio Negri <ziriuz84@gmail.com> 1731625155 +0100	commit: Additional plugins
+eed9cb98156c3f83d189915417f7c6144bc0ba60 44d7650f574f5b1c2e48f6aa45d3c64e22d20c68 Sirio Negri <ziriuz84@gmail.com> 1731625209 +0100	commit (merge): Merge branch 'master' of github.com:ziriuz84/kickstart.nvim
+44d7650f574f5b1c2e48f6aa45d3c64e22d20c68 77fbb7d1bfa0023fb09771f65cdb04646b3c10c0 Sirio Negri <ziriuz84@gmail.com> 1731626155 +0100	commit: update
+77fbb7d1bfa0023fb09771f65cdb04646b3c10c0 f8fd226d3c4d929c24c5850ee94d84becbe5d25a Sirio Negri <ziriuz84@gmail.com> 1731888112 +0100	commit: Adds new plugins
+f8fd226d3c4d929c24c5850ee94d84becbe5d25a 30fad700588873d4f63e488d071523c132e6de7a Sirio Negri <ziriuz84@gmail.com> 1731888124 +0100	commit: upgrade of init.lua
