@@ -999,6 +999,20 @@ require('lazy').setup({
     },
   },
 })
+vim.api.nvim_create_autocmd({ "FileType" }, {
+  pattern = { "php", "yaml", "yml" },
+  callback = function()
+    vim.b.autoformat = false
+  end,
+})
+
+vim.api.nvim_create_autocmd({ "FileType" }, {
+  pattern = { "md", "markdown" },
+  callback = function()
+    vim.o.textwidth = 80
+    vim.opt.spelllang = { "en", "it" }
+  end,
+})
 
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et

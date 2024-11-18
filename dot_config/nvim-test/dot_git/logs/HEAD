@@ -9,3 +9,5 @@ f8fd226d3c4d929c24c5850ee94d84becbe5d25a 30fad700588873d4f63e488d071523c132e6de7
 794d1fb2cc3a6afd9864143b1e08e1d040cc1537 34bf62f17273f7e1a99f0702c099846eb34a7d22 Sirio Negri <ziriuz84@gmail.com> 1731909771 +0100	commit: Adds better groups
 34bf62f17273f7e1a99f0702c099846eb34a7d22 e53ccce67637730b49f9dfad53c7a8839e50272e Sirio Negri <ziriuz84@gmail.com> 1731909778 +0100	commit: replace dapui
 e53ccce67637730b49f9dfad53c7a8839e50272e cb81b06b5de6fcbf683d6dc6eff9450871f4975e Sirio Negri <sirio.negri@ssd.it> 1731944531 +0100	commit: Better neovim for new installation
+cb81b06b5de6fcbf683d6dc6eff9450871f4975e 507adf4d868b355876c4c45433ee0019e41e8885 Sirio Negri <sirio.negri@ssd.it> 1731952444 +0100	commit: removes unused sources in cmp
+507adf4d868b355876c4c45433ee0019e41e8885 93d47cf101864340d832161167232a6fbb9e2ca5 Sirio Negri <sirio.negri@ssd.it> 1731952476 +0100	commit: adds autocmd to disable autoformat on save and editor options for markdown
