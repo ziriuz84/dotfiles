@@ -6,3 +6,5 @@ eed9cb98156c3f83d189915417f7c6144bc0ba60 44d7650f574f5b1c2e48f6aa45d3c64e22d20c6
 77fbb7d1bfa0023fb09771f65cdb04646b3c10c0 f8fd226d3c4d929c24c5850ee94d84becbe5d25a Sirio Negri <ziriuz84@gmail.com> 1731888112 +0100	commit: Adds new plugins
 f8fd226d3c4d929c24c5850ee94d84becbe5d25a 30fad700588873d4f63e488d071523c132e6de7a Sirio Negri <ziriuz84@gmail.com> 1731888124 +0100	commit: upgrade of init.lua
 30fad700588873d4f63e488d071523c132e6de7a 794d1fb2cc3a6afd9864143b1e08e1d040cc1537 Sirio Negri <ziriuz84@gmail.com> 1731907788 +0100	commit: Adds tabnine
+794d1fb2cc3a6afd9864143b1e08e1d040cc1537 34bf62f17273f7e1a99f0702c099846eb34a7d22 Sirio Negri <ziriuz84@gmail.com> 1731909771 +0100	commit: Adds better groups
+34bf62f17273f7e1a99f0702c099846eb34a7d22 e53ccce67637730b49f9dfad53c7a8839e50272e Sirio Negri <ziriuz84@gmail.com> 1731909778 +0100	commit: replace dapui
