@@ -20,12 +20,12 @@ return {
           -- `friendly-snippets` contains a variety of premade snippets.
           --    See the README about individual language/framework/plugin snippets:
           --    https://github.com/rafamadriz/friendly-snippets
-          -- {
-          --   'rafamadriz/friendly-snippets',
-          --   config = function()
-          --     require('luasnip.loaders.from_vscode').lazy_load()
-          --   end,
-          -- },
+          {
+            'rafamadriz/friendly-snippets',
+            config = function()
+              require('luasnip.loaders.from_vscode').lazy_load()
+            end,
+          },
         },
       },
       'saadparwaiz1/cmp_luasnip',
@@ -36,6 +36,14 @@ return {
       'hrsh7th/cmp-nvim-lsp',
       'hrsh7th/cmp-path',
       'onsails/lspkind.nvim',
+      'hrsh7th/cmp-emoji',
+      'chrisgrieser/cmp-nerdfont',
+      'roginfarrer/cmp-css-variables',
+      "chrisgrieser/cmp_yanky",
+      'SergioRibera/cmp-dotenv',
+      'ray-x/cmp-treesitter',
+      'ray-x/cmp-sql',
+      'lukas-reineke/cmp-rg'
     },
     config = function()
       -- See `:help cmp`
@@ -122,6 +130,14 @@ return {
             { name = 'path' },
             { name = 'crates' },
             { name = 'cmp_tabnine' },
+            { name = 'emoji' },
+            { name = 'nerdfont' },
+            { name = 'css-variables' },
+            { name = 'cmp_yanky' },
+            { name = 'dotenv' },
+            { name = 'treesitter' },
+            { name = 'sql' },
+            { name = 'rg' },
           },
           formatting = {
             format = function(entry, vim_item)
@@ -214,6 +230,14 @@ return {
             { name = 'codeium' },
             { name = 'crates' },
             { name = 'cmp_tabnine' },
+            { name = 'emoji' },
+            { name = 'nerdfont' },
+            { name = 'css-variables' },
+            { name = 'cmp_yanky' },
+            { name = 'dotenv' },
+            { name = 'treesitter' },
+            { name = 'sql' },
+            { name = 'rg' },
           },
           formatting = {
             format = function(entry, vim_item)

@@ -324,6 +324,7 @@ require('lazy').setup({
         { '<leader>x', group = 'Trouble' },
         { '<leader>n', group = '[N]eogen' },
         { '<leader>X', group = 'DAP' },
+        { '<leader>H', group = 'Harpoon' },
       },
     },
   },
