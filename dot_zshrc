@@ -127,6 +127,7 @@ export PATH=$PATH:$ANDROID_HOME/emulator
 export PATH=$PATH:$ANDROID_HOME/tools
 export PATH=$PATH:$ANDROID_HOME/tools/bin
 export PATH=$PATH:$ANDROID_HOME/platform-tools
+export PATH="$PATH:$(go env GOBIN):$(go env GOPATH)/bin"
 export PATH
 eval "$(starship init zsh)"
 export NVM_DIR="$HOME/.nvm"
