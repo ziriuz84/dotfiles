@@ -187,6 +187,7 @@ exec --no-startup-id "/home/sirio/Nextcloud.AppImage"
 exec --no-startup-id "feh --bg-scale --randomize ~/wallpaper/*"
 exec --no-startup-id "solaar"
 exec --no-startup-id "setxkbmap -option compose:caps"
+exec --no-startup-id "i3-battery-popup -n -D -L 20 -l 10"
 
 # redshift modes
 bindsym $mod+b mode "$mode_redshift"
