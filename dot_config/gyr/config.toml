@@ -1,0 +1,5 @@
+# Default values
+highlight_color = "LightBlue"
+cursor = "█"
+terminal_launcher = "xfce4-terminal -e"
+hard_stop = false
