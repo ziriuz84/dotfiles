@@ -7,8 +7,10 @@ return {
       local lint = require 'lint'
       lint.linters_by_ft = {
         markdown = { 'markdownlint' },
-        php = { 'phpcs' },
-        phtml = { 'phpcs' }
+        javascript = { 'eslint_d' },
+        typescript = { 'eslint_d' },
+        -- php = { 'phpcs' },
+        -- phtml = { 'phpcs' }
       }
 
       -- To allow other plugins to add linters to require('lint').linters_by_ft,

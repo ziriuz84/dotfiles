@@ -1,3 +1,8 @@
 return {
-  { 'LunarVim/bigfile.nvim' },
+  {
+    'pteroctopus/faster.nvim',
+    config = function()
+      require('faster').setup()
+    end,
+  },
 }

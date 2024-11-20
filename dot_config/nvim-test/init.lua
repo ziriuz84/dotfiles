@@ -271,7 +271,7 @@ require('lazy').setup({
   -- after the plugin has been loaded:
   --  config = function() ... end
 
-  {                     -- Useful plugin to show you pending keybinds.
+  { -- Useful plugin to show you pending keybinds.
     'folke/which-key.nvim',
     event = 'VimEnter', -- Sets the loading event to 'VimEnter'
     opts = {
@@ -314,7 +314,7 @@ require('lazy').setup({
 
       -- Document existing key chains
       spec = {
-        { '<leader>c', group = '[C]ode',     mode = { 'n', 'x' } },
+        { '<leader>c', group = '[C]ode', mode = { 'n', 'x' } },
         { '<leader>d', group = '[D]ocument' },
         { '<leader>r', group = '[R]ename' },
         { '<leader>s', group = '[S]earch' },
@@ -358,7 +358,7 @@ require('lazy').setup({
       { 'nvim-telescope/telescope-ui-select.nvim' },
 
       -- Useful for getting pretty icons, but requires a Nerd Font.
-      { 'nvim-tree/nvim-web-devicons',            enabled = vim.g.have_nerd_font },
+      { 'nvim-tree/nvim-web-devicons', enabled = vim.g.have_nerd_font },
     },
     config = function()
       -- Telescope is a fuzzy finder that comes with a lot of different things that
@@ -454,7 +454,7 @@ require('lazy').setup({
       },
     },
   },
-  { 'Bilal2453/luvit-meta',     lazy = true },
+  { 'Bilal2453/luvit-meta', lazy = true },
   {
     -- Main LSP Configuration
     'neovim/nvim-lspconfig',
@@ -466,7 +466,7 @@ require('lazy').setup({
 
       -- Useful status updates for LSP.
       -- NOTE: `opts = {}` is the same as calling `require('fidget').setup({})`
-      { 'j-hui/fidget.nvim',       opts = {} },
+      { 'j-hui/fidget.nvim', opts = {} },
 
       -- Allows extra capabilities provided by nvim-cmp
       'hrsh7th/cmp-nvim-lsp',
@@ -593,13 +593,13 @@ require('lazy').setup({
       })
 
       -- Change diagnostic symbols in the sign column (gutter)
-      -- if vim.g.have_nerd_font then
-      --   local signs = { Error = '', Warn = '', Hint = '', Info = '' }
-      --   for type, icon in pairs(signs) do
-      --     local hl = 'DiagnosticSign' .. type
-      --     vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = hl })
-      --   end
-      -- end
+      if vim.g.have_nerd_font then
+        local signs = { Error = '', Warn = '', Hint = '', Info = '' }
+        for type, icon in pairs(signs) do
+          local hl = 'DiagnosticSign' .. type
+          vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = hl })
+        end
+      end
 
       -- LSP servers and clients are able to communicate to each other what features they support.
       --  By default, Neovim doesn't support everything that is in the LSP specification.
@@ -628,6 +628,7 @@ require('lazy').setup({
         codeqlls = {},
         cssls = {},
         css_variables = {},
+        phpactor = {},
         emmet_ls = {},
         html = {},
         jsonls = {},
@@ -647,6 +648,16 @@ require('lazy').setup({
         -- But for many setups, the LSP (`ts_ls`) will work just fine
         -- ts_ls = {},
         --
+
+        intelephense = {
+          settings = {
+            intelephense = {
+              format = {
+                enable = false,
+              },
+            },
+          },
+        },
 
         lua_ls = {
           -- cmd = {...},
@@ -712,6 +723,13 @@ require('lazy').setup({
     opts = {
       notify_on_error = false,
       format_on_save = function(bufnr)
+        -- Check if file is in the specified directory
+        local file_path = vim.fn.expand '%:p'
+        local excluded_path = '/home/sirio/Projects/agim-project/data/www/agim3.ssd/agim'
+        if string.find(file_path, excluded_path) then
+          return false
+        end
+
         -- Disable "format_on_save lsp_fallback" for languages that don't
         -- have a well standardized coding style. You can add additional
         -- languages here or re-enable it for the disabled ones.
@@ -731,8 +749,8 @@ require('lazy').setup({
         lua = { 'stylua' },
         rust = { 'rust_analyzer' },
         python = { 'black', 'isort' },
-        javascript = { 'biome' },
-        typescript = { 'biome' },
+        javascript = { 'prettierd' },
+        typescript = { 'prettierd' },
         html = { 'prettierd' },
         css = { 'prettierd' },
         scss = { 'prettierd' },
@@ -740,12 +758,19 @@ require('lazy').setup({
         yaml = { 'prettierd' },
         markdown = { 'prettierd' },
         graphql = { 'prettierd' },
+        -- php = { 'php-cs-fixer', 'pint' },
+        -- phtml = { 'php-cs-fixer', 'pint' },
         -- Conform can also run multiple formatters in parallel
         -- Conform can also run multiple formatters sequentially
         -- python = { "isort", "black" },
         --
         -- You can use 'stop_after_first' to run the first available formatter from the list
         -- javascript = { "prettierd", "prettier", stop_after_first = true },
+      },
+      formatters = {
+        php_cs_fixer = {
+          prepend_args = { '--rules=PSR12' },
+        },
       },
     },
   },
@@ -999,18 +1024,18 @@ require('lazy').setup({
     },
   },
 })
-vim.api.nvim_create_autocmd({ "FileType" }, {
-  pattern = { "php", "yaml", "yml" },
+vim.api.nvim_create_autocmd({ 'FileType' }, {
+  pattern = { 'php', 'phtml', 'yaml', 'yml' },
   callback = function()
-    vim.b.autoformat = false
+    vim.g.autoformat = false
   end,
 })
 
-vim.api.nvim_create_autocmd({ "FileType" }, {
-  pattern = { "md", "markdown" },
+vim.api.nvim_create_autocmd({ 'FileType' }, {
+  pattern = { 'md', 'markdown' },
   callback = function()
     vim.o.textwidth = 80
-    vim.opt.spelllang = { "en", "it" }
+    vim.opt.spelllang = { 'en', 'it' }
   end,
 })
 
