@@ -9,6 +9,8 @@ return {
         markdown = { 'markdownlint' },
         javascript = { 'eslint_d' },
         typescript = { 'eslint_d' },
+        dockerfile = { 'hadolint' },
+        sh = { 'shellcheck' },
         -- php = { 'phpcs' },
         -- phtml = { 'phpcs' }
       }
