@@ -7,14 +7,28 @@ return {
       local lint = require 'lint'
       lint.linters_by_ft = {
         markdown = { 'markdownlint' },
-        javascript = { 'eslint_d' },
-        typescript = { 'eslint_d' },
+        javascript = { 'eslint_d', 'semgrep' },
+        typescript = { 'eslint_d', 'semgrep' },
         dockerfile = { 'hadolint' },
         sh = { 'shellcheck' },
-        -- php = { 'phpcs' },
-        -- phtml = { 'phpcs' }
+        sql = { 'sqlfluff' },
+        html = { 'markuplint' },
+        php = { 'phpcs', 'semgrep' },
+        phtml = { 'phpcs', 'semgrep' },
+        python = { 'flake8' },
+        css = { 'stylelint' },
+        scss = { 'stylelint' },
+        json = { 'jsonlint' },
+        lua = { 'luacheck' },
+        yaml = { 'yamllint' },
       }
 
+      local file_path = vim.fn.expand '%:p'
+      local excluded_path = '/home/sirio/Projects/agim-project/agim3.ssd/agim/'
+      if string.find(file_path, excluded_path) then
+        lint.linters_by_ft['php'] = nil
+        lint.linters_by_ft['phtml'] = nil
+      end
       -- To allow other plugins to add linters to require('lint').linters_by_ft,
       -- instead set linters_by_ft like this:
       -- lint.linters_by_ft = lint.linters_by_ft or {}
