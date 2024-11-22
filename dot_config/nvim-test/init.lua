@@ -758,8 +758,8 @@ require('lazy').setup({
         yaml = { 'prettierd' },
         markdown = { 'prettierd' },
         graphql = { 'prettierd' },
-        -- php = { 'php-cs-fixer', 'pint' },
-        -- phtml = { 'php-cs-fixer', 'pint' },
+        php = { 'php-cs-fixer', 'pint' },
+        phtml = { 'php-cs-fixer', 'pint' },
         -- Conform can also run multiple formatters in parallel
         -- Conform can also run multiple formatters sequentially
         -- python = { "isort", "black" },

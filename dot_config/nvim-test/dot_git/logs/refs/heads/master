@@ -13,3 +13,4 @@ cb81b06b5de6fcbf683d6dc6eff9450871f4975e 507adf4d868b355876c4c45433ee0019e41e888
 507adf4d868b355876c4c45433ee0019e41e8885 93d47cf101864340d832161167232a6fbb9e2ca5 Sirio Negri <sirio.negri@ssd.it> 1731952476 +0100	commit: adds autocmd to disable autoformat on save and editor options for markdown
 93d47cf101864340d832161167232a6fbb9e2ca5 c6a055467e9095777bd08891c9c966ce3d55a831 Sirio Negri <sirio.negri@ssd.it> 1732131851 +0100	commit: New updates
 c6a055467e9095777bd08891c9c966ce3d55a831 27fed74e192c27b5f64f9c6c834297da1d34dfbd Sirio Negri <ziriuz84@gmail.com> 1732252303 +0100	commit: Fixes excluding path for formatting
+27fed74e192c27b5f64f9c6c834297da1d34dfbd 8030eb10ba2bcbef119055f7d54818fec3f8732a Sirio Negri <ziriuz84@gmail.com> 1732253511 +0100	commit: enables php formatting
