@@ -725,7 +725,7 @@ require('lazy').setup({
       format_on_save = function(bufnr)
         -- Check if file is in the specified directory
         local file_path = vim.fn.expand '%:p'
-        local excluded_path = '/home/sirio/Projects/agim-project/data/www/agim3.ssd/agim'
+        local excluded_path = '/home/sirio/Projects/agim-project/agim3.ssd/agim/'
         if string.find(file_path, excluded_path) then
           return false
         end
@@ -1023,12 +1023,6 @@ require('lazy').setup({
       lazy = '💤 ',
     },
   },
-})
-vim.api.nvim_create_autocmd({ 'FileType' }, {
-  pattern = { 'php', 'phtml', 'yaml', 'yml' },
-  callback = function()
-    vim.g.autoformat = false
-  end,
 })
 
 vim.api.nvim_create_autocmd({ 'FileType' }, {
