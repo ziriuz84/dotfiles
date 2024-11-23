@@ -1,9 +1,0 @@
-{
-    "workspace.checkThirdParty": false,
-    "workspace.library": [
-        "/home/sirio/.local/share/nvim/lazy/neodev.nvim/types/stable",
-        "/home/linuxbrew/.linuxbrew/Cellar/neovim/0.9.4/share/nvim/runtime/lua",
-        "/home/sirio/.local/share/chezmoi/dot_config/nvim/lua",
-        "${3rd}/luv/library"
-    ]
-}
