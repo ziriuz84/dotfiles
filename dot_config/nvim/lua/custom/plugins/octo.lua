@@ -8,5 +8,30 @@ return {
   },
   config = function()
     require('octo').setup()
-  end
+  end,
+  keys = {
+    { '<leader>Oic', '<cmd>Octo issue create<CR>', desc = 'Create issue' },
+    { '<leader>Oil', '<cmd>Octo issue list<CR>', desc = 'List issues' },
+    { '<leader>OiC', '<cmd>Octo issue close<CR>', desc = 'Close issue' },
+    { '<leader>Oir', '<cmd>Octo issue reopen<CR>', desc = 'Reopen issue' },
+    { '<leader>Oib', '<cmd>Octo issue browser<CR>', desc = 'Open current issue in browser' },
+    { '<leader>Oid', '<cmd>Octo issue develop<CR>', desc = 'Develop this issue' },
+    { '<leader>Oid', '<cmd>Octo issue edit<CR>', desc = 'Edit issue' },
+    { '<leader>Opc', '<cmd>Octo pr create<CR>', desc = 'Create pull request' },
+    { '<leader>Opl', '<cmd>Octo pr list<CR>', desc = 'List pull requests' },
+    { '<leader>OpC', '<cmd>Octo pr close<CR>', desc = 'Close pull request' },
+    { '<leader>OpR', '<cmd>Octo pr reopen<CR>', desc = 'Reopen pull request' },
+    { '<leader>Ope', '<cmd>Octo pr edit<CR>', desc = 'Edit pull request' },
+    { '<leader>Oph', '<cmd>Octo pr checkout<CR>', desc = 'Checkout pull request' },
+    { '<leader>OpH', '<cmd>Octo pr checks<CR>', desc = 'Show the status of all checks' },
+    { '<leader>Opb', '<cmd>Octo pr browser<CR>', desc = 'Open current pull request in browser' },
+    { '<leader>Opm', '<cmd>Octo pr merge<CR>', desc = 'Merge pull request' },
+    { '<leader>Opr', '<cmd>Octo pr ready<CR>', desc = 'Mark pull request as ready' },
+    { '<leader>Opd', '<cmd>Octo pr draft<CR>', desc = 'Mark pull request as draft' },
+    { '<leader>OpD', '<cmd>Octo pr diff<CR>', desc = 'Show pull request diff' },
+    { '<leader>Oca', '<cmd>Octo comment add<CR>', desc = 'Add comment' },
+    { '<leader>Ocd', '<cmd>Octo comment delete<CR>', desc = 'Delete comment' },
+    { '<leader>Ois', '<cmd>Octo issue search<CR>', desc = 'Search issues requests' },
+    { '<leader>Ops', '<cmd>Octo pr search<CR>', desc = 'Search PRs requests' },
+  },
 }
