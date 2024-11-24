@@ -6,9 +6,12 @@ return {
       'hrsh7th/nvim-cmp',
     },
     config = function()
-      require('codeium').setup {
-        enable_chat = true,
-      }
+      local hostname = vim.fn.hostname()
+      if not hostname == 'sirio-eeepc1015pn' then
+        require('codeium').setup {
+          enable_chat = true,
+        }
+      end
     end,
   },
 }
