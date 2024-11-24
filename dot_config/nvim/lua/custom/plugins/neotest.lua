@@ -7,7 +7,7 @@ return {
       'nvim-neotest/neotest-go',
       'nvim-neotest/neotest-python',
       'nvim-neotest/neotest-jest',
-      'mrcjkb/rustaceanvim',
+      'rouge8/neotest-rust',
     },
     config = function()
       require('neotest').setup {
@@ -16,7 +16,7 @@ return {
           require 'neotest-go',
           require 'neotest-python',
           require 'neotest-jest',
-          require 'rustaceanvim.neotest',
+          require 'neotest-rust',
         },
         status = { virtual_text = true },
         output = { open_on_run = true },
