@@ -7,7 +7,10 @@ return {
     },
     config = function()
       local hostname = vim.fn.hostname()
-      if not hostname == 'sirio-eeepc1015pn' then
+      if hostname == 'sirio-eeepc1015pn' then
+        vim.notify 'Codeium disabled'
+      else
+        vim.notify 'Codeium enabled'
         require('codeium').setup {
           enable_chat = true,
         }
