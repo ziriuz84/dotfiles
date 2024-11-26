@@ -329,6 +329,7 @@ require('lazy').setup({
         { '<leader>Oi', group = 'Issues' },
         { '<leader>Op', group = 'PRs' },
         { '<leader>Oc', group = 'Comments' },
+        { '<leader>z', group = '[Z]ettelkasten' },
       },
     },
   },
