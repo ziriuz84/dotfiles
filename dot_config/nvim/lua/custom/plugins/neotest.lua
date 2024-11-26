@@ -1,6 +1,7 @@
 return {
   {
     'nvim-neotest/neotest',
+    event = 'VeryLazy',
     dependencies = {
       'nvim-neotest/nvim-nio',
       'olimorris/neotest-phpunit',

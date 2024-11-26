@@ -1,9 +1,9 @@
 return {
   {
-    "ellisonleao/carbon-now.nvim",
-    lazy = true,
-    cmd = "CarbonNow",
+    'ellisonleao/carbon-now.nvim',
+    event = 'VeryLazy',
+    cmd = 'CarbonNow',
     ---@param opts cn.ConfigSchema
-    opts = { [[ your custom config here ]] }
-  }
+    opts = { [[ your custom config here ]] },
+  },
 }

@@ -1,3 +1,3 @@
 return {
-  { 'mistweaverco/kulala.nvim', opts = {} },
+  { 'mistweaverco/kulala.nvim', event = 'VeryLazy', opts = {} },
 }
