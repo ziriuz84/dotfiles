@@ -793,6 +793,7 @@ require('lazy').setup({
         graphql = { 'prettierd' },
         php = { 'php-cs-fixer', 'pint' },
         phtml = { 'php-cs-fixer', 'pint' },
+        blade = { 'blade-formatter' },
         -- Conform can also run multiple formatters in parallel
         -- Conform can also run multiple formatters sequentially
         -- python = { "isort", "black" },
