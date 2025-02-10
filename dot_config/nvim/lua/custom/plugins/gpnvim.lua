@@ -3,6 +3,7 @@ return {
   config = function()
     local conf = {
       -- For customization, refer to Install > Configuration in the Documentation/Readme
+      openai_api_key = { 'cat', '~/Nextcloud/openai' },
     }
     require('gp').setup(conf)
 
