@@ -1217,5 +1217,9 @@ vim.api.nvim_create_autocmd({ 'BufNewFile', 'BufRead' }, {
     vim.opt.filetype = 'php'
   end,
 })
+
+vim.g.augment_workspace_folders = { '~/Projects/asteroid_tui/' }
+
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et
+--
