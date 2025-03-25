@@ -193,6 +193,7 @@ exec --no-startup-id "i3-battery-popup -n -D -L 20 -l 10"
 bindsym $mod+b mode "$mode_redshift"
 set $mode_redshift Set colour temperature: (a)uto, (r)eset, (2)500K, (3)000K, (4)000K, (5)000K, (6)000K, (7)000K
 set $kill_redshift pkill -9 redshift;
+exec --no-startup-id "$kill_redshift redshift -P -O 5000"
 mode "$mode_redshift" {
     bindsym a exec --no-startup-id "$kill_redshift redshift -P -t 5000:4000", mode "default"
     bindsym r exec --no-startup-id "$kill_redshift redshift -x", mode "default"
