@@ -788,7 +788,7 @@ require('lazy').setup({
         scss = { 'prettierd' },
         json = { 'prettierd' },
         yaml = { 'prettierd' },
-        astro = { 'prettierd' },
+        astro = { 'prettier' },
         markdown = { 'prettierd' },
         graphql = { 'prettierd' },
         php = { 'php-cs-fixer', 'pint' },
@@ -1218,7 +1218,22 @@ vim.api.nvim_create_autocmd({ 'BufNewFile', 'BufRead' }, {
   end,
 })
 
-vim.g.augment_workspace_folders = { '~/Projects/asteroid_tui/' }
+vim.g.augment_workspace_folders = {
+  '~/Projects/asteroid_tui/',
+  '~/Projects/asteroid_app/',
+  '~/Projects/AASApp/',
+  '~/Projects/asteroidpy',
+  '~/Projects/caprebipedi/',
+  '~/Projects/comete/',
+  '~/Projects/corpi-minori/',
+  '~/Projects/configurazioni-ottiche-telescopi/',
+  '~/Projects/grandezze-astronomia/',
+  '~/Projects/lezione-stelle/',
+  '~/Projects/proloco-biassa/',
+  '~/Projects/runningincinqueterre/',
+  '~/Projects/sito-aas/',
+  '~/Projects/storia-astronomia/',
+}
 
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et
