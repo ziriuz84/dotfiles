@@ -755,7 +755,7 @@ require('lazy').setup({
       format_on_save = function(bufnr)
         -- Check if file is in the specified directory
         local file_path = vim.fn.expand '%:p'
-        local excluded_path = '/home/sirio/Projects/agim%-project/data/www/agim3%.ssd/agim'
+        local excluded_path = '/home/sirio/Projects/agim%-project/agim'
         if string.find(file_path, excluded_path) then
           return false
         end
@@ -1233,6 +1233,20 @@ vim.g.augment_workspace_folders = {
   '~/Projects/runningincinqueterre/',
   '~/Projects/sito-aas/',
   '~/Projects/storia-astronomia/',
+  '~/Projects/side/asteroid_tui/',
+  '~/Projects/side/asteroid_app/',
+  '~/Projects/side/AASApp/',
+  '~/Projects/side/asteroidpy',
+  '~/Projects/side/caprebipedi/',
+  '~/Projects/side/comete/',
+  '~/Projects/side/corpi-minori/',
+  '~/Projects/side/configurazioni-ottiche-telescopi/',
+  '~/Projects/side/grandezze-astronomia/',
+  '~/Projects/side/lezione-stelle/',
+  '~/Projects/side/proloco-biassa/',
+  '~/Projects/side/runningincinqueterre/',
+  '~/Projects/side/sito-aas/',
+  '~/Projects/side/storia-astronomia/',
 }
 
 -- The line beneath this is called `modeline`. See `:help modeline`
