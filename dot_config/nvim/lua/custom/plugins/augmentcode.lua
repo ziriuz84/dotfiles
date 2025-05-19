@@ -1,4 +1,7 @@
-if hostname ~= 'sirio-eeepc1015pn' then
-  return { 'augmentcode/augment.vim' }
-end
-return true
+return {
+  'augmentcode/augment.vim',
+  cond = function()
+    local hostname = vim.loop.os_gethostname():gsub('\n$', '')
+    return hostname ~= 'sirio-eeepc1015pn'
+  end,
+}

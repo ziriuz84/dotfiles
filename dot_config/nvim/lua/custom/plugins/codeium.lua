@@ -1,6 +1,10 @@
 return {
   {
     'Exafunction/codeium.nvim',
+    cond = function()
+      local hostname = vim.loop.os_gethostname():gsub('\n$', '')
+      return hostname ~= 'sirio-eeepc1015pn'
+    end,
     event = 'VeryLazy',
     dependencies = {
       'nvim-lua/plenary.nvim',
