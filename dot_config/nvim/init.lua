@@ -1218,37 +1218,6 @@ vim.api.nvim_create_autocmd({ 'BufNewFile', 'BufRead' }, {
   end,
 })
 
-vim.g.augment_workspace_folders = {
-  '~/Projects/asteroid_tui/',
-  '~/Projects/asteroid_app/',
-  '~/Projects/AASApp/',
-  '~/Projects/asteroidpy',
-  '~/Projects/caprebipedi/',
-  '~/Projects/comete/',
-  '~/Projects/corpi-minori/',
-  '~/Projects/configurazioni-ottiche-telescopi/',
-  '~/Projects/grandezze-astronomia/',
-  '~/Projects/lezione-stelle/',
-  '~/Projects/proloco-biassa/',
-  '~/Projects/runningincinqueterre/',
-  '~/Projects/sito-aas/',
-  '~/Projects/storia-astronomia/',
-  '~/Projects/side/asteroid_tui/',
-  '~/Projects/side/asteroid_app/',
-  '~/Projects/side/AASApp/',
-  '~/Projects/side/asteroidpy',
-  '~/Projects/side/caprebipedi/',
-  '~/Projects/side/comete/',
-  '~/Projects/side/corpi-minori/',
-  '~/Projects/side/configurazioni-ottiche-telescopi/',
-  '~/Projects/side/grandezze-astronomia/',
-  '~/Projects/side/lezione-stelle/',
-  '~/Projects/side/proloco-biassa/',
-  '~/Projects/side/runningincinqueterre/',
-  '~/Projects/side/sito-aas/',
-  '~/Projects/side/storia-astronomia/',
-}
-
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et
 --
