@@ -755,8 +755,21 @@ require('lazy').setup({
       format_on_save = function(bufnr)
         -- Check if file is in the specified directory
         local file_path = vim.fn.expand '%:p'
-        local excluded_path = '/home/sirio/Projects/agim%-project/agim'
-        if string.find(file_path, excluded_path) then
+        local excluded_paths = {
+          '/home/sirio/Projects/agim%-project/agim',
+          '/home/sirio/Projects/agim%-project/devilbox/data/www/agim3',
+        }
+
+        local function is_excluded_path(file_path)
+          for _, path in ipairs(excluded_paths) do
+            if string.find(file_path, path) then
+              return true
+            end
+          end
+          return false
+        end
+
+        if is_excluded_path(file_path) then
           return false
         end
 
