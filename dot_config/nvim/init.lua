@@ -758,6 +758,7 @@ require('lazy').setup({
         local excluded_paths = {
           '/home/sirio/Projects/agim%-project/agim',
           '/home/sirio/Projects/agim%-project/devilbox/data/www/agim3',
+          '/home/sirio/Projects/agim%-project/ssdgest',
         }
 
         local function is_excluded_path(file_path)
