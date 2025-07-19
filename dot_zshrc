@@ -159,3 +159,6 @@ export PATH="$BUN_INSTALL/bin:$PATH"
 export GPG_TTY=$(tty)
 
 export OPENAI_API_KEY=$(< ~/Nextcloud/openai)
+export GEMINI_API_KEY=$(< ~/Nextcloud/gemini_api)
+export GOOGLE_CLOUD_PROJECT=$(< ~/Nextcloud/google_cloud_project)
+eval "$(atuin init zsh)"
