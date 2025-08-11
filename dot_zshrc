@@ -162,3 +162,4 @@ export OPENAI_API_KEY=$(< ~/Nextcloud/openai)
 export GEMINI_API_KEY=$(< ~/Nextcloud/gemini_api)
 export GOOGLE_CLOUD_PROJECT=$(< ~/Nextcloud/google_cloud_project)
 eval "$(atuin init zsh)"
+export PATH="$HOME/.local/bin:$PATH"
