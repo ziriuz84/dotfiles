@@ -144,7 +144,7 @@ return {
             format = function(entry, vim_item)
               -- if you have lspkind installed, you can use it like
               -- in the following line:
-              vim_item.kind = lspkind.symbolic(vim_item.kind, { mode = 'symbol' })
+              -- vim_item.kind = lspkind.symbolic(vim_item.kind, { mode = 'symbol' })
               vim_item.menu = source_mapping[entry.source.name]
               if entry.source.name == 'cmp_tabnine' then
                 local detail = (entry.completion_item.labelDetails or {}).detail
@@ -253,7 +253,7 @@ return {
             format = function(entry, vim_item)
               -- if you have lspkind installed, you can use it like
               -- in the following line:
-              vim_item.kind = lspkind.symbolic(vim_item.kind, { mode = 'symbol' })
+              -- vim_item.kind = lspkind.symbolic(vim_item.kind, { mode = 'symbol' })
               vim_item.menu = source_mapping[entry.source.name]
               if entry.source.name == 'cmp_tabnine' then
                 local detail = (entry.completion_item.labelDetails or {}).detail

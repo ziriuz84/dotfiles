@@ -634,7 +634,6 @@ require('lazy').setup({
         codeqlls = {},
         cssls = {},
         css_variables = {},
-        phpactor = {},
         emmet_language_server = {
           filetypes = { 'css', 'eruby', 'html', 'javascript', 'javascriptreact', 'less', 'sass', 'scss', 'pug', 'typescriptreact', 'php', 'phtml' },
           -- Read more about this options in the [vscode docs](https://code.visualstudio.com/docs/editor/emmet#_emmet-configuration).
@@ -808,6 +807,7 @@ require('lazy').setup({
         php = { 'php-cs-fixer', 'pint' },
         phtml = { 'php-cs-fixer', 'pint' },
         blade = { 'blade-formatter' },
+        golang = { 'gofmt', 'goimports' },
         -- Conform can also run multiple formatters in parallel
         -- Conform can also run multiple formatters sequentially
         -- python = { "isort", "black" },
@@ -1308,7 +1308,6 @@ vim.lsp.config('vtsls', vtsls_config)
 vim.lsp.config('vue_ls', vue_ls_config)
 vim.lsp.config('ts_ls', ts_ls_config)
 vim.lsp.enable { 'vtsls', 'vue_ls' } -- If using `ts_ls` replace `vtsls` to `ts_ls`
-
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et
 --
