@@ -220,3 +220,5 @@ bindsym $mod+Shift+v exec ~/.vim-anywhere/bin/run
 bar {
         status_command i3status
 }
+
+bindsym $mod+Shift+b exec --no-startup-id i3lock
