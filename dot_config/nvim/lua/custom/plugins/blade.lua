@@ -14,11 +14,10 @@ vim.filetype.add {
     ['.*%.blade%.php'] = 'blade',
   },
 }
-local bladeGrp
-vim.api.nvim_create_augroup('BladeFiltypeRelated', { clear = true })
+local blade_filetype_augroup = vim.api.nvim_create_augroup('BladeFiltypeRelated', { clear = true })
 vim.api.nvim_create_autocmd({ 'BufNewFile', 'BufRead' }, {
   pattern = '*.blade.php',
-  group = bladeGrp,
+  group = blade_filetype_augroup,
   callback = function()
     vim.opt.filetype = 'blade'
   end,

@@ -321,6 +321,7 @@ require('lazy').setup({
         { '<leader>w', group = '[W]orkspace' },
         { '<leader>t', group = '[T]oggle' },
         { '<leader>h', group = 'Git [H]unk', mode = { 'n', 'v' } },
+        { '<leader>hc', group = 'Git [C]onflict' },
         { '<leader>x', group = 'Trouble' },
         { '<leader>n', group = '[N]eogen' },
         { '<leader>X', group = 'DAP' },
@@ -517,7 +518,7 @@ require('lazy').setup({
           -- for LSP related items. It sets the mode, buffer and description for us each time.
           local map = function(keys, func, desc, mode)
             mode = mode or 'n'
-            vim.keymap.set(mode, keys, func, { buffer = event.buf, desc = 'LSP: ' .. desc })
+            vim.keymap.set(mode, keys, func, { buf = event.buf, desc = 'LSP: ' .. desc })
           end
 
           -- Jump to the definition of the word under your cursor.
@@ -598,13 +599,24 @@ require('lazy').setup({
         end,
       })
 
-      -- Change diagnostic symbols in the sign column (gutter)
+      -- Diagnostic signs (Nvim 0.12+: use vim.diagnostic.config, not sign_define — :help news-0.12)
       if vim.g.have_nerd_font then
-        local signs = { Error = '', Warn = '', Hint = '', Info = '' }
-        for type, icon in pairs(signs) do
-          local hl = 'DiagnosticSign' .. type
-          vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = hl })
-        end
+        vim.diagnostic.config {
+          signs = {
+            text = {
+              [vim.diagnostic.severity.ERROR] = '',
+              [vim.diagnostic.severity.WARN] = '',
+              [vim.diagnostic.severity.HINT] = '',
+              [vim.diagnostic.severity.INFO] = '',
+            },
+            numhl = {
+              [vim.diagnostic.severity.ERROR] = 'DiagnosticSignError',
+              [vim.diagnostic.severity.WARN] = 'DiagnosticSignWarn',
+              [vim.diagnostic.severity.HINT] = 'DiagnosticSignHint',
+              [vim.diagnostic.severity.INFO] = 'DiagnosticSignInfo',
+            },
+          },
+        }
       end
 
       -- LSP servers and clients are able to communicate to each other what features they support.
@@ -1224,9 +1236,10 @@ function map(mode, lhs, rhs, opts)
   vim.api.nvim_set_keymap(mode, lhs, rhs, options)
 end
 
+local phm_filetype_augroup = vim.api.nvim_create_augroup('kickstart-phm-filetype', { clear = true })
 vim.api.nvim_create_autocmd({ 'BufNewFile', 'BufRead' }, {
   pattern = '*.phm',
-  group = bladeGrp,
+  group = phm_filetype_augroup,
   callback = function()
     vim.opt.filetype = 'php'
   end,
